@@ -20,8 +20,8 @@ module.exports = function(grunt) {
     concat:{
       compilejs:{
         src:[
-          "app/lib/jquery/min.js",
-          "app/lib/angular/angular.min.js",
+          "bower_components/jquery/jquery.min.js",
+          "bower_components/jquery.scrollTo/jquery.scrollTo.min.js",
           "app/js/app.js"
         ],
         dest:"app/js/app.cc.js"
