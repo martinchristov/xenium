@@ -1,0 +1,19 @@
+{
+  "name": "Xenium",
+  "version": "0.0.0",
+  "description": "interactive presentation for Xenium company",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-recess": "~0.4.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-livereload": "~0.1.2",
+    "grunt-contrib-uglify": "~0.3.2"
+  }
+}

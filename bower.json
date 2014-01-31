@@ -1,0 +1,11 @@
+{
+  "name": "xenium",
+  "version": "0.0.0",
+  "homepage": "https://github.com/martinchristov/xenium",
+  "authors": [
+    "Martin Christov <martin.christov@gmail.com>"
+  ],
+  "description": "interactive presentation of xenium",
+  "main": "xenium-bower",
+  "license": "MIT"
+}
