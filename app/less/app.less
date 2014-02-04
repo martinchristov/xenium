@@ -1,3 +1,7 @@
+.transition(@props)
+{
+    -webkit-transition:@props;-moz-transition:@props;transition:@props;-o-transition:@props;
+}
 body{
 	padding: 0;
 	margin: 0;
@@ -30,6 +34,20 @@ body{
 		width: 100%;
 		top:auto;
 	}
+	.transition(background .4s);
+}
+
+.portfolio .frame{
+	background-color:#26729c;
+}
+.range .frame{
+	background-color:#e16a28;
+}
+.audience .frame{
+	background-color:#c9da3e;
+}
+.brands .frame{
+	background-color:#ea2825;
 }
 
 .header{
