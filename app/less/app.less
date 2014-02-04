@@ -46,9 +46,15 @@ body{
 			list-style: none;
 			float: right;
 			margin-right: 50px;
+			line-height: 52px;
 			li{
 				float: left;
-				margin: 0 10px;
+				margin: 0;
+				a{
+					text-decoration: none; color: #8c8c8c; font-size: 18px; font-weight: bold; text-transform: uppercase;
+					padding: 7px 10px;
+					&:hover{color: #fff; border-radius: 3px; background: #a2a2a2;}
+				}
 			}
 		}
 	}
@@ -73,5 +79,168 @@ body{
 		font-size: 20px;
 		color: #737272;
 		text-align: center;
+	}
+	img.graph{
+		width: 100%;
+	}
+}
+#portfolio{
+	.tops{
+		//width: 100%;
+		//margin: 1.25em;
+		height: 6em;
+		background: #939598;
+		h1{
+			color: #fff;
+			 margin: 3em auto; 
+			 font-size: 2.3em; 
+			 font-weight: bold; 
+			 font-family: Arial; 
+			 padding: 0.8em 0; 
+			 width: 7em;
+			 text-align: center;
+		}
+	}	
+	.folio-top{text-align: center;}
+	ul{
+		list-style: none;
+		width: 100%;
+		padding: 0px;
+		margin: 0 auto;
+
+		li{
+			display: inline-block;
+			padding: 20px 30px; 
+			//margin: 30px 0; 
+
+		}
+	}
+}
+#range{
+	text-align: center;
+	h2{
+		padding-bottom: 90px;
+		
+	}
+
+	
+}
+h2{
+	color: #77787b; 
+	text-transform: uppercase; 
+	padding-bottom: 10px;
+}
+#audience{
+	text-align: center;
+	h2{
+		padding-bottom: 50px;
+	}
+	.sex{
+		float: left;
+		width: 50%;
+		padding-bottom: 90px;
+		&.fem{color: #faa73d;}
+		&.male{
+			color: #4f6aa2;
+			img{
+				text-align: right;
+			}
+		}
+	}
+	.huge{
+		font-size: 30px;
+		font-weight: bold;
+	}
+	ul{
+		list-style: none;
+		text-align: center;
+		li{
+			display: inline-block;
+			width: 12%;
+			border-right: 1px solid #939598;
+			font-weight: bold;
+			color: #77787b;
+			padding: 0 15px;
+			&:last-child{border-right: none;}
+			
+			.smaller{
+				display: block;
+				color: #939598;
+				font-size: 14px;
+			}
+		}
+	}
+}
+#brands{
+	text-align: center;
+	h2{
+		padding-bottom: 10px;
+		margin: 0;
+	}
+	img{}
+	.branding{
+
+		h4{
+			padding: 40px 0;
+			text-align: center;
+			border-top: 3px double #000;
+			border-bottom: double 3px #000;
+			.sub{
+				font-size: 12px;
+				display: block;
+			}
+		}
+		ul{
+			list-style-image: url("img/xen-icon.png");
+			padding: 0 0 30px;
+			text-align: left;
+			list-style-position:inside;
+			//list-style-image: url("img/xen-icon.png");
+			li{
+				line-height: 30px;
+			}
+			li .sublist{
+				list-style: none;
+				padding-left: 50px;
+			} 
+			li.bracket{
+
+				img{
+					margin: 0;
+					padding: 0;
+					margin-bottom: -14px;
+					//display: inline;
+				}
+				span{
+					margin-top: -45px;
+					margin-left: 30px;
+					display: block;
+
+				}
+			}
+			li.xen{
+				list-style-position:inside;
+				list-style: disc; 
+			}
+		}
+		.bottom{
+			border-top: 1px solid #000;
+			padding-top: 20px;
+			margin-top: 20px;
+			list-style: none;
+		}
+		&.cpc{
+			h4{
+				padding: 29px 0;
+			}
+		}
+		float: left;
+		width: 22%;
+		margin-left: 30px;
+	}
+
+	.media-bottom{
+		float: left;
+		width: 48%;
 	}
 }
