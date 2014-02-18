@@ -22,7 +22,12 @@ module.exports = function(grunt) {
         src:[
           "bower_components/jquery/jquery.min.js",
           "bower_components/jquery.scrollTo/jquery.scrollTo.min.js",
-          "app/js/app.js"
+          "bower_components/angular/angular.min.js",
+          "bower_components/angular-translate/angular-translate.min.js",
+          //"bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js",
+          //"bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js",
+          "app/js/app.js",
+          "app/js/i18n/locale.js"
         ],
         dest:"app/js/app.cc.js"
       }

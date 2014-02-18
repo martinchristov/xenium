@@ -1,6 +1,22 @@
+angular.module("xenium", [
+		'pascalprecht.translate'
+
+	])
+.config(['$translateProvider', function ($translateProvider) {
+	 $translateProvider.translations('en', dictEN)
+                      .translations('bg', dictBG);
+
+     $translateProvider.preferredLanguage('en');
+}])
+.controller('MainCtrl', ['$scope', '$translate', function ($scope, $translate) {
+	$scope.changeLanguage = function (langKey) {
+        $translate.uses(langKey);
+    };
+}])
+
 var $sections=[],
 	sectiony={},
-	$doc=$(document),
+	$doc = $(document),
 	lastsection = '';
 $doc.ready(function(){
 	$(".nav a").click(function(e){
@@ -11,6 +27,29 @@ $doc.ready(function(){
 	})
 	$sections = $('.section-outer');
 	$(window).resize();
+
+
+	// Create the dropdown base
+	$("<select />").appendTo(".inner");
+	// Create default option "Go to..."
+	$("<option />", {
+	   "selected": "selected",
+	   "value"   : "",
+	   "text"    : "Go to..."
+	}).appendTo(".inner select");
+
+	// Populate dropdown with menu items
+	$(".nav a").each(function() {
+	 var el = $(this);
+	 $("<option />", {
+	     "value"   : el.attr("href"),
+	     "text"    : el.text()
+	 }).appendTo(".inner select");
+	});
+
+	$(".inner select").change(function() {
+	  window.location = $(this).find("option:selected").val();
+	});
 })
 
 $doc.scroll(function(e){
@@ -21,7 +60,7 @@ $doc.scroll(function(e){
 	}
 	if(section!=lastsection){
 		lastsection=section;
-		$("body").attr('class',section);
+		$("body").attr('class', section);
 	}
 })
 
@@ -30,3 +69,6 @@ $(window).resize(function(){
 		sectiony[$(this).attr('id')] = $(this).position().top;
 	})
 })
+
+
+

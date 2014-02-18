@@ -2,17 +2,20 @@
 {
     -webkit-transition:@props;-moz-transition:@props;transition:@props;-o-transition:@props;
 }
+.clear{clear: both;}
 body{
 	padding: 0;
 	margin: 0;
 	font-family: Noto Sans;
 }
+ul{padding: 0;}
 .frame{
 	background-color: #26729c;
 	left: 0;
 	top: 0;
 	z-index: 999;
 	position: fixed;
+
 	@w:1.25em;
 	&.top{
 		height:@w;
@@ -37,16 +40,18 @@ body{
 	.transition(background .4s);
 }
 
-.portfolio .frame{
+.contact a{background-color: #26729c;}
+
+.portfolio .frame, .portfolio .contact a{
 	background-color:#26729c;
 }
-.range .frame{
+.range .frame, .range .contact a{
 	background-color:#e16a28;
 }
-.audience .frame{
+.audience .frame, .audience .contact a{
 	background-color:#c9da3e;
 }
-.brands .frame{
+.brands .frame, .brands .contact a{
 	background-color:#ea2825;
 }
 
@@ -57,6 +62,9 @@ body{
 	background-color: white;
 	padding: 1.25em;
 	z-index: 10;
+	select{
+		display: none;      
+	}
 	.inner{
 		padding: 32px;
 		
@@ -69,11 +77,27 @@ body{
 				float: left;
 				margin: 0;
 				a{
-					text-decoration: none; color: #8c8c8c; font-size: 18px; font-weight: bold; text-transform: uppercase;
+					text-decoration: none; 
+					color: #8c8c8c; 
+					font-size: 18px; font-weight: bold; text-transform: uppercase;
 					padding: 7px 10px;
 					&:hover{color: #fff; border-radius: 3px; background: #a2a2a2;}
 				}
+				&.contact{
+					a{
+						//background: #26729c;
+						border-radius: 4px;
+						height: 24px;
+						width: 29px;
+						display: block;
+						padding-bottom: 18px;
+						text-align: center;
+						margin-left: 10px;
+						&:hover{background: #26729c;}
+					}
+				}
 			}
+			
 		}
 	}
 }
@@ -81,7 +105,9 @@ body{
 .section-outer{
 	width: 100%;
 	background-color: #fff;
-	padding: 0;
+	padding: 1px 0 200px;
+	
+	//border-top: 1px solid #fff;
 	.section-inner{
 		max-width: 64em;
 		margin: auto;
@@ -89,7 +115,8 @@ body{
 }
 #home{
 	.x-holder{
-		margin: 260px auto 0;width:620px;
+		margin: 260px auto 0;
+		width:92%;
 		img{
 			width: 100%;
 			margin-bottom: 20px;
@@ -128,9 +155,8 @@ body{
 
 		li{
 			display: inline-block;
-			padding: 20px 30px; 
-			//margin: 30px 0; 
-
+			padding: 10px 30px;
+			height: 72px;
 		}
 	}
 }
@@ -138,10 +164,7 @@ body{
 	text-align: center;
 	h2{
 		padding-bottom: 90px;
-		
-	}
-
-	
+	}	
 }
 h2{
 	color: #77787b; 
@@ -166,38 +189,41 @@ h2{
 		}
 	}
 	.huge{
-		font-size: 30px;
+		font-size: 40px;
 		font-weight: bold;
 	}
 	ul{
 		list-style: none;
 		text-align: center;
+		padding: 0;
 		li{
 			display: inline-block;
-			width: 12%;
+			width: 16%;
 			border-right: 1px solid #939598;
 			font-weight: bold;
 			color: #77787b;
 			padding: 0 15px;
+			font-size: 20px;
 			&:last-child{border-right: none;}
 			
 			.smaller{
 				display: block;
 				color: #939598;
-				font-size: 14px;
+				font-size: 17px;
 			}
 		}
 	}
 }
 #brands{
-	text-align: center;
+	//text-align: center;
 	h2{
 		padding-bottom: 10px;
 		margin: 0;
+		text-align: center;
 	}
-	img{}
+	img.main{margin-left: 25px;}
 	.branding{
-
+		text-align: center;
 		h4{
 			padding: 40px 0;
 			text-align: center;
@@ -249,7 +275,7 @@ h2{
 		}
 		&.cpc{
 			h4{
-				padding: 29px 0;
+				padding: 31px 0;
 			}
 		}
 		float: left;
@@ -257,8 +283,204 @@ h2{
 		margin-left: 30px;
 	}
 
-	.media-bottom{
+	.brand-medias{
+		width: 490px;
 		float: left;
-		width: 48%;
+		margin-right: 20px;
+		margin-bottom: 200px;
+		.media-top{
+			list-style: none; 
+			padding: 0;
+			color: #76777b;
+			width: 79%;
+			height: 300px;
+			&.svejo li:before{
+			   	color: #ff9900;
+		    }
+		    &.bulevard li:before{
+			   	color: #8e203f;
+		    }
+		    &.kulinaria li:before{
+		    	color: #886327;
+		    }
+		    &.termo li:before{
+		    	color: #e30613;
+		    }
+		    &.hardware li:before{
+		    	color: #f58220;
+		    }
+		    &.mobility li:before{
+		    	color: #ff871c;
+		    }
+		    &.mobile li:before{
+		    	color: #f58220;
+		    }
+		    &.calculator li:before{
+		    	color: #f58220;
+		    }
+		    &.meganews li:before{
+		    	color: #e41e26;
+		    }
+		    &.jenite li:before{
+		    	color: #333366;
+		    }
+		    &.megalife li:before{
+		    	color: #ccc;
+		    }
+		    &.foods li:before{
+		    	color: #884c4d;
+		    }
+		    &.kidamom li:before{
+		    	color: #ff2e43;
+		    }
+		    &.shvargalo li:before{
+		    	color: #8bcccf;
+		    }
+			li{
+				//background: url("img/bracket.png") no-repeat 2px 9px;
+				padding-left: 35px;
+				padding: 12px 0;
+				min-height: 55px;
+				position: relative;
+				strong{
+					color: #58595b;
+				}
+				&:before {
+				   content: "}";
+				   left: 1px;
+				   position: absolute;
+				   top: -2px;
+				   font-size: 57px;
+				   font-family: Arial;
+
+				}
+
+			}
+		}
+
+		.media-bottom{
+			float: left;
+			width: 35%;
+			font-size: 14px;
+			padding: 0 20px;
+			margin-top: 0px;
+			small{font-size: 15px; padding: 5px 0; letter-spacing: 0.02em;}
+			.huge{font-size: 37px; font-weight: bold; text-align: center; }
+			.topdata{
+				text-transform: uppercase; 
+				font-size: 22px; 
+				font-weight: bold; 
+				line-height: 17px; 
+				padding-bottom: 4px;
+				&.part{border-top: 1px solid #666; padding-top: 20px; margin-top: 10px;}
+			}
+			h4{margin-bottom: 10px;}
+			ul{
+				list-style: none;
+				
+			}
+			span{
+				display: block;
+			}
+			img{
+				float: left;
+				margin-right: 10px;
+				//padding-top: 20px;
+			}
+			.data{float: left; width: 48%;}
+			.mb-footer{
+				text-align: center;
+				width: 152px;
+				font-size: 13px;
+				padding-top: 10px;	
+				.map{
+					width: 100px; 
+					height: 66px; 
+					margin: auto auto; 
+					background: url("img/map_svejo.png") no-repeat 1px 1px;
+					color: #fff;
+					text-align: center;
+					font-size: 30px;
+					line-height: 66px;
+				}
+				span{font-size: 16px; font-weight: bold;}				
+			}
+			&.right{
+				text-align: center;
+				width: 43%;
+				border-left: 1px solid #666; padding-left: 25px; font-size: 13px;
+				img{padding-bottom: 20px;}
+				ul{margin: 0; }
+			}
+		}
+	}	
+
+	#others{
+		clear: both;
+		position: relative;	
+		z-index: 0;
+		.otherforms{
+			background: url("img/game.png") no-repeat 0 110px;
+			height: 800px;
+			.right{float: right;}
+			&.video{
+				background: url("img/viral-video.png") no-repeat 0 110px;
+			}
+		}
+
+		.x-tops{
+			//width: 100%;
+			//margin: 1.25em;
+			height: 7em;
+			background: #77787b;
+			clear: both;
+			h1{
+				color: #fff;
+				 margin: 3em auto; 
+				 font-size: 1.6em; 
+				 font-weight: bold; 
+				 font-family: Arial; 
+				 padding: 1.6em 0;
+				 text-align: center;
+			}
+		}
+		.bar{
+			height: 17px;
+			background: url("img/viralvideo.png") no-repeat;
+			position: absolute;
+			top: 181px;
+			left: 0;
+			z-index: 999;
+			width: 100%;
+		}
+		img{float: left;}
+
+		.other-medias{
+			float: left;
+			//width: 46%px;
+			text-align: center;
+			margin-top: 103px;
+			padding: 0 35px;
+
+			img{float: none;}
+			h5{
+				color: #333; 
+				font-size: 16px; 
+				margin: 0; 
+				padding: 10px;
+				font-weight: normal;
+			}
+			p{
+				text-align: left; 
+				margin: 20px auto; 
+				font-family: Arial;
+				width: 381px;
+				padding-left: 6px;
+				font-size: 15px;
+				line-height: 24px;
+			}
+		}	
 	}
 }
+
+@import "mobile.less";
