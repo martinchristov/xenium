@@ -343,7 +343,20 @@ var dictBG = {
     "NIEJENITE IS A SITE":"<strong>Nie-jenite.bg</strong> е сайт за модерната и успяла жена, интересуваща се <strong>мода, красота, задраве, любов, дизайн и полезни съвети</strong>",
     "THE MEDIUM ALLOWS ITS USERS":"Медията позволява на потребителите да оценяват и коментират публикации, да споделят и обсъждат своите проблеми и истории.",
     "MEGALIFE IS A DEVELOPED":"<strong>Megalife.bg</strong> е развита и успешна лайфстайл медия, която има за цел да информира и забавлява потребителите си с богато разнообразие от съдържателни публикации",
-    "THE MEDIUMS USERS":"Потребителите на медията са главно <strong>Икономически активни, заинтересовани от лайфстайла в страната </strong> "
+    "THE MEDIUMS USERS":"Потребителите на медията са главно <strong>Икономически активни, заинтересовани от лайфстайла в страната </strong> ",
+    "FOODS IS A CULINARY SITE":"<strong>Foods.bg</strong> е кулинарен сайт с множество избрани рецепти, любопитни факти и полезни приложения.",
+    "IT PRESENTS IN THE MOST":"Представя максимално достъпно най-добрите рецепти като акцентът е върху здравословното хранене и начин на живот. Аудиорията е предимно от жени, от добрата кухня и здраве.",
+    "KIDAMOM IS A FUN":"<strong>Kidamom.com</strong> забавна интерактивна среда за вашето дете с много анимационни и образователни филми.",
+    "XENIUM MEDIA COMPANY TOGETHER WITH":"Xenium Media Company с удоволствие ви представя онлайн проекта Kidamom.com, съвместно с Кидамом ООД и Eleven. Kidamom.com предоставя интерактивна среда за деца до 12 години. В специализирания сайт подрастващите обогатяват своите уменията и знанията по забавен и достъпен начин.",
+    "KIDAMOM IS A PLACE":"Kidamom.com е място, в което децата се въвеждат в съвременния дигитален свят, развивайки своите личностни качества и индивидуални навици. Платформата предлагаме подбрано качествено съдържание и възможност за родителски контрол.",
+    "SHVARGALO IS AN ART COMPANY":"<strong>Shvargalo.com</strong> е арт компания, която се занимава с <strong> продуциране и произвеждане на филми, книги, спектакли, музикално-танцови и сценични произведения.</strong>",
+    "KAMEN DONEV AND ELENA BOZOVA":"В проекта взимат участие <strong> Камен Донев (режисьор и актьор) Елена Бозова (актьор)</strong> в компанията на именити български актьори.",
+    "THE AUDIENCE CONSISTS OF":"Аудиторията е <strong> мъже и жени на възраст между 20 и 40 години,</strong> жители на големи и средни градове, икономически активни потребители, интересуващи се от <strong> мъже и жени на възраст между 20 и 40 години,</strong> култура, изкуство и развлечения.",
+    "NONSTANDARD FORMATS":"НЕСТАРДАНТНИ ФОРМАТИ",
+    "CLIENT":"Клиент: ",
+    "NESCAFE: THE GAME ATTRACTED":"Играта се проведе при голям интерес и за периода на конкурса получихме над 70 авторски рецепти. Страницата на конкурса беше широко промотирана в сайтовете на Xenium Media и за периода на кампанията беше посетена от над 50 000 потребители и събра над 20 000 харесвания на рецептите във Facebook.",
+    "NESCAFE: THE CONTEST WEBPAGE":" ",
+    "TEFAL: THE GAME":"Играта се проведе при голям интерес от потребителите. Всеки един от тях представи своето любимо модно съчетание, като покани приятелите си да гласуват за неговата снимка. Играта се проведе в рамките на петнадесет дни, като беше промотирана чрез брандиране на Bulevard.bg.",
 
 }
 
@@ -388,7 +401,7 @@ var dictEN = {
     "EXCEPTIONALLY WELL DEVELOPED FORUM":"Has an exceptionally well developed forum.",
     "MOBILITY UNITES":"<strong>Mobility.bg</strong> unites the three most popular sites for mobile phone fans: <strong>iPhoneBulgaria.com, WinPhone.bg</strong> and All4android.com. It's audience is <strong>interested in all the latest  in the mobile technology world and has substantial knowlege in the field</strong>.",
     "IN 2013 MOBILE":"In 2013 <strong>Xenium Media</strong>  started offering exclusively for Bulgaria <strong>mobile.de</strong> and the Bulgarian audience traffic within it.",
-    "THE AUDIENCE CONSISTS","The audience consists mainly of <strong>young people with high income,</strong> looking to buy cars priced over 5,000 euro.",
+    "THE AUDIENCE CONSISTS":"The audience consists mainly of <strong>young people with high income,</strong> looking to buy cars priced over 5,000 euro.",
     "CALCULATOR FOR EVERYTHING":"<strong>Calculator.bg</strong> - for everything and everyone.",
     "FACILITATES ANY CALCULATION":"Facilitates any calculation.",
     "YOU CAN CALCULATE":"You can calculate <strong>salary, currency, interest, notary fees, taxes, etc.</strong>",
@@ -397,5 +410,19 @@ var dictEN = {
     "NIEJENITE IS A SITE":"<strong>Nie-jenite.bg</strong> is a site for the modern and successful woman, who is interested in <strong>fashion, beauty, love, health, design and useful tips.</strong>",
     "THE MEDIUM ALLOWS ITS USERS":"The medium allows its users to rate and comment publications, as well as share and discuss their own problems and stories.",
     "MEGALIFE IS A DEVELOPED":"<strong>Megalife.bg</strong> is a developed and successful lifestyle medium aimed at informing and entertaining its users through rich variety of meaningful publications.",
-    "THE MEDIUMS USERS":"The medium's users are predominantly <strong>economically active and lifestyle oriented</strong>."
+    "THE MEDIUMS USERS":"The medium's users are predominantly <strong>economically active and lifestyle oriented</strong>.",
+    "FOODS IS A CULINARY SITE":"<strong>Foods.bg</strong> is a culinary site with a multitude of chosen recipes, curious facts and useful applications.",
+    "IT PRESENTS IN THE MOST":"It presents in the most easy to understand way the best recipes, focusing on healthy nutrition and lifestyle. The audience consists chiefly of women interested in good cuisine and health.",
+    "KIDAMOM IS A FUN":"<strong>Kidamom.com</strong> - a fun, interactive environment for your child with lots of cartoons and educational movies.",
+    "XENIUM MEDIA COMPANY TOGETHER WITH":"Xenium Media Company, together with Kidamom OOD and Eleven, is pleased to present you the online project Kidamom.com. Kidamom.com offers an interactive environment for kids up to 12 years old. Children enrich their skills and knowledge in the specialized site in a fun and accessible way.",
+    "KIDAMOM IS A PLACE":"Kidamom.com is a place where children are introduced to the contemporary digital world while developing their personal qualities and individual habits. The platform offers selected, high­quality content and the ability for parental control.",
+    "SHVARGALO IS AN ART COMPANY":"<strong>Shvargalo.com</strong> - Shvargalo.com is an art company <strong>producing films, books, shows, music, dance and stage performances</strong>.",
+    "KAMEN DONEV AND ELENA BOZOVA":"<strong>Kamen Donev (Director/Actor)</strong> and <strong>Elena Bozova (Actor)</strong> take part in the project in the company of famous Bulgarian actors.",
+    "THE AUDIENCE CONSISTS OF":"The audience consists of <strong>men and women, aged 20 to 40</strong>, living in big and medium­sized cities, economically active users, interested in <strong>culture, art and entertainment</strong>.",
+    "NONSTANDARD FORMATS":"NONSTANDARD FORMATS",
+    "CLIENT":"Client: ",
+    "NESCAFE: THE GAME ATTRACTED":"The game attracted huge interest and over 70 original recipes were received over the period of the contest. ",
+    "NESCAFE: THE CONTEST WEBPAGE":"The contest  webpage was widely promoted on the Xenium Media websites. It was visited by more than 50,000 users and attracted over 20,000 Facebook likes of the recipes over the campaign period.",
+    "TEFAL: THE GAME":""
+
 }

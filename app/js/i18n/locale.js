@@ -120,8 +120,7 @@ var dictEN = {
     "FOODS IS A CULINARY SITE":"<strong>Foods.bg</strong> is a culinary site with a multitude of chosen recipes, curious facts and useful applications.",
     "IT PRESENTS IN THE MOST":"It presents in the most easy to understand way the best recipes, focusing on healthy nutrition and lifestyle. The audience consists chiefly of women interested in good cuisine and health.",
     "KIDAMOM IS A FUN":"<strong>Kidamom.com</strong> - a fun, interactive environment for your child with lots of cartoons and educational movies.",
-    "XENIUM MEDIA COMPANY TOGETHER WITH":"Xenium Media Company, together with Kidamom OOD and Eleven, is pleased to present
-you the online project Kidamom.com. Kidamom.com offers an interactive environment for kids up to 12 years old. Children enrich their skills and knowledge in the specialized site in a fun and accessible way.",
+    "XENIUM MEDIA COMPANY TOGETHER WITH":"Xenium Media Company, together with Kidamom OOD and Eleven, is pleased to present you the online project Kidamom.com. Kidamom.com offers an interactive environment for kids up to 12 years old. Children enrich their skills and knowledge in the specialized site in a fun and accessible way.",
     "KIDAMOM IS A PLACE":"Kidamom.com is a place where children are introduced to the contemporary digital world while developing their personal qualities and individual habits. The platform offers selected, high­quality content and the ability for parental control.",
     "SHVARGALO IS AN ART COMPANY":"<strong>Shvargalo.com</strong> - Shvargalo.com is an art company <strong>producing films, books, shows, music, dance and stage performances</strong>.",
     "KAMEN DONEV AND ELENA BOZOVA":"<strong>Kamen Donev (Director/Actor)</strong> and <strong>Elena Bozova (Actor)</strong> take part in the project in the company of famous Bulgarian actors.",
@@ -129,9 +128,7 @@ you the online project Kidamom.com. Kidamom.com offers an interactive environmen
     "NONSTANDARD FORMATS":"NONSTANDARD FORMATS",
     "CLIENT":"Client: ",
     "NESCAFE: THE GAME ATTRACTED":"The game attracted huge interest and over 70 original recipes were received over the period of the contest. ",
-    "NESCAFE: THE CONTEST WEBPAGE":"The contest  webpage was widely promoted on the Xenium Media websites. It was visited by more than 50,000 users and 
-attracted over 20,000 Facebook likes of the recipes over the
-campaign period.",
+    "NESCAFE: THE CONTEST WEBPAGE":"The contest  webpage was widely promoted on the Xenium Media websites. It was visited by more than 50,000 users and attracted over 20,000 Facebook likes of the recipes over the campaign period.",
     "TEFAL: THE GAME":""
 
 }
