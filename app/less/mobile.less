@@ -1,16 +1,3 @@
-/* Smartphones (portrait and landscape) ----------- */
-
-
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
-}
-
-
-
-
-
 /* iPads (portrait and landscape) ----------- */
 @media only screen  
 and (max-width : 1024px) {
@@ -93,10 +80,6 @@ and (max-width : 1024px) {
 			}
 			&.right{
 				padding: 0  25px 6px;
-
-				img{						
-					border-bottom:1px solid #999;		
-				}
 				.data{
 					width: 47%;
 				}
@@ -112,13 +95,11 @@ and (max-width : 768px) {
 		max-width: 72%;
 	}
 		.header .inner .nav li{ 
-		a{font-size: 16px;}
-		&.contact{
-
-		}		
+		a{font-size: 16px;}			
 	}
 
-	#portfolio {		ul {
+	#portfolio {		
+		ul {
 			
 			li{
 				padding: 10px 21px;
@@ -187,11 +168,35 @@ and (max-width : 768px) {
 and (max-width : 640px) {
 	.nav {
 		margin: 0;
+		margin-top: 10px!important;
+		width: 84%;
 		li { 
 			padding: 0;
-			a{font-size: 15px !important; }		
-	 	} 
+			width: 100%;
+    		display: block;
+    		text-align: right;
+    		margin: 0;
+    		height: auto;
+    		line-height: 30px;
+			a{font-size: 15px !important; float: left; display: block;}		
+	 	}
+		.contact{display: none;}
+
+
 	}
+	.header .inner .nav li.mobile-contact {display: block; }
+	.nav-toggle{
+		display: block;
+		font-size: 36px;
+		//float: right!important;
+		text-decoration: none;
+		color: #999;
+		//margin-right: 30px;
+		//line-height: 36px;
+		position: absolute;
+		top: 45px;
+		right: 83px;
+	}	
 	 #home .x-holder img{ width: 90%;} 
 	 #portfolio {
 		ul {
@@ -230,25 +235,26 @@ and (max-width : 640px) {
 /* Smartphones (portrait) ----------- */
 @media only screen 
 and (max-width : 629px) {
-	.nav li { display: none; }
-  	.header {
-  		.inner a{width: 50px; float: left; display: block;}
-	  		select { 
-		  		display: inline-block;
-		  		float: right;
-		  		width: 150px;
-		  		border: 1px solid #ddd;
-		  		padding: 10px;
-		  		font-size: 18px;
-		  		text-transform: capitalize;
-				color: #999;
-				margin-right: 30px;
-				&:focus{
-					outline: none;
-					//border: none;
-				}
-  			}
-  	 }
+	//.nav li { display: block; }
+  	// .header {
+  	// 	.inner a{width: 50px; float: left; display: block;}
+  	// // 	select { 
+	  // // 		display: inline-block;
+	  // // 		float: right;
+	  // // 		width: 150px;
+	  // // 		border: 1px solid #ddd;
+	  // // 		padding: 10px;
+	  // // 		font-size: 18px;
+	  // // 		text-transform: capitalize;
+			// // color: #999;
+			// // margin-right: 30px;
+			// // &:focus{
+			// // 	outline: none;
+			// // 	//border: none;
+			// // }
+			// // }
+		
+  	//  }
 }
 
 @media only screen 
@@ -297,36 +303,55 @@ and (max-width : 480px) {
 	}
 
 	#brands .brand-medias .media-bottom .topdata{
-		font-size: 15px;
+		//font-size: 15px;
+		float: none;
+	}
+
+	#brands .brand-medias .media-bottom .topdata.part{
+		font-size: 18px;
 	}
 
 	#brands .brand-medias .media-bottom small {
-		font-size: 11px;
+		//font-size: 11px;
 	}
 
 	#brands .brand-medias .media-bottom .huge {
-		font-size: 27px;
+		font-size: 31px;
 	}
 
 	#brands .brand-medias .media-bottom{
-		width: 34%;
-		padding: 0 10px;
+		width: 40%;
+		padding: 0 10px 0 0;
+		.impressions{
+			padding-top: 2px!important;
+		}
 	}
 
+
 	#brands .brand-medias .media-bottom .mb-footer {
-		width: 120px;
+		//width: 120px;
 	}
 	#brands .brand-medias .media-bottom .data{
 		min-width: 50%;
 	}
 	#brands .brand-medias .media-bottom.right{
-		padding-left: 16px;
+		padding-left: 10px;
 		width: 48%;
+		.data{
+			//border: none;
+		}
+		hr{
+			display: block;
+			margin-left: 13px;
+			width: 100%;
+			border: none;
+			border-top: 1px solid #666;
+		}
 	}
 }
 
 @media only screen 
-and (max-width : 320px) {
+and (max-width : 360px){
 	#home .x-holder img {
 		width: 90%;
 
@@ -422,32 +447,42 @@ and (max-width : 320px) {
 				width: auto;
 				text-align: center;
 				float: none;
+				border: none;
 				img{
-					margin: 0 -21px 0 36px;
+					//margin-left: -33px;
+					float: none;
+					display: inline;
 				}
-				.topdata{
-					font-size: 24px;
+				.topdata, .part{
+					font-size: 22px;
+					display: inline;
+					float: none;
 				}
-				.small{
+				small{
 					font-size: 15px;
 				}
 				.huge{
 					font-size: 29px;
+					clear: both;
 				}
 				&.right{
 					padding: 0;
 					width: 92%;
 					border-left: none;
+					margin: 0 12px;
 					img{
 						padding-bottom: 20px;
-						border-bottom:1px solid #999;
 						float: none;
 						margin-top: 30px;
 						margin-left: 0;
+
 					}
+					//hr{display: none;}
 					.data{
 						width: 50%;
+						border-top:1px solid #999;
 					}
+
 				}
 				.mb-footer{
 					width: auto;

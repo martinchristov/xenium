@@ -8,6 +8,14 @@ body{
 	margin: 0;
 	font-family: Noto Sans;
 }
+hr{
+	display: block;
+	//margin-left: 13px;
+	//width: 100%;
+	padding-bottom: 10px;
+	border: none;
+	border-top: 1px solid #666;
+}
 ul{padding: 0;}
 .frame{
 	background-color: #26729c;
@@ -65,13 +73,19 @@ ul{padding: 0;}
 	select{
 		display: none;      
 	}
+	.lang{
+		position: absolute;
+		top: 21px;
+		right: 66px;
+		a{color: #999; text-decoration: none;}
+	}
 	.inner{
 		padding: 32px;
 		
 		.nav{
 			list-style: none;
-			float: right;
-			margin-right: 50px;
+			float: right; 
+			margin: -5px 50px 0 0;
 			line-height: 52px;
 			li{
 				float: left;
@@ -96,9 +110,11 @@ ul{padding: 0;}
 						&:hover{background: #26729c;}
 					}
 				}
+				&.mobile-contact{display:none;}
 			}
 			
 		}
+
 	}
 }
 
@@ -345,7 +361,7 @@ h2{
 				strong{
 					color: #58595b;
 				}
-				&:before {
+				&:before { 
 				   content: "}";
 				   left: 1px;
 				   position: absolute;
@@ -364,15 +380,25 @@ h2{
 			font-size: 14px;
 			padding: 0 20px;
 			margin-top: 0px;
+			text-align: center;
+			border-right: 1px solid #666;
+
 			small{font-size: 15px; padding: 5px 0; letter-spacing: 0.02em;}
-			.huge{font-size: 37px; font-weight: bold; text-align: center; }
+			.center{text-align: center; clear: both; }
+			.huge{font-size: 34px; font-weight: bold; text-align: center; }
 			.topdata{
 				text-transform: uppercase; 
 				font-size: 22px; 
 				font-weight: bold; 
 				line-height: 17px; 
 				padding-bottom: 4px;
-				&.part{border-top: 1px solid #666; padding-top: 20px; margin-top: 10px;}
+				float: left;
+				&.part{
+					//border-top: 1px solid #666; 
+					//padding-top: 20px; 
+					margin-top: 10px; 
+					font-size: 19px;
+				}
 			}
 			h4{margin-bottom: 10px;}
 			ul{
@@ -384,20 +410,38 @@ h2{
 			}
 			img{
 				float: left;
+				//margin-right: -17px;
+				//margin-left: 20px;
 				margin-right: 10px;
-				//padding-top: 20px;
+				margin-left: 0px;
+				&.impressions{
+					margin: 0;
+					margin-right: 10px;
+					padding-top: 9px;
+				}
 			}
-			.data{float: left; width: 48%;}
+			//hr{display:none;}
+			.data{
+				float: left; 
+				width: 48%; 
+				//border-top:1px solid #999;
+				li{
+					white-space: nowrap;
+					span{
+						display: inline;
+					}
+				}
+			}
 			.mb-footer{
 				text-align: center;
-				width: 152px;
+				//width: 152px;
 				font-size: 13px;
 				padding-top: 10px;	
 				.map{
-					width: 100px; 
+					//width: 100px; 
 					height: 66px; 
 					margin: auto auto; 
-					background: url("img/map_svejo.png") no-repeat 1px 1px;
+					background: url("img/map_svejo.png") no-repeat center;
 					color: #fff;
 					text-align: center;
 					font-size: 30px;
@@ -408,9 +452,12 @@ h2{
 			&.right{
 				text-align: center;
 				width: 43%;
-				border-left: 1px solid #666; padding-left: 25px; font-size: 13px;
-				img{padding-bottom: 20px;}
+				border-right: none; padding-left: 25px; font-size: 13px;
+				img{padding-bottom: 20px; margin: 0; }
 				ul{margin: 0; }
+				.data{
+					border-top:1px solid #666;
+				}
 			}
 		}
 	}	

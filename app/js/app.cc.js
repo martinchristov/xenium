@@ -217,6 +217,447 @@ ngModel:fe,ngList:he,ngChange:ge,required:Oc,ngRequired:Oc,ngValue:je}).directiv
 //# sourceMappingURL=angular.min.js.map
 
 angular.module("pascalprecht.translate",["ng"]).run(["$translate",function(a){var b=a.storageKey(),c=a.storage();c?c.get(b)?a.use(c.get(b)):angular.isString(a.preferredLanguage())?a.use(a.preferredLanguage()):c.set(b,a.use()):angular.isString(a.preferredLanguage())&&a.use(a.preferredLanguage())}]),angular.module("pascalprecht.translate").provider("$translate",["$STORAGE_KEY",function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p={},q=[],r=a,s=[],t=!1,u="translate-cloak",v=!1,w=".",x=function(){var a=window.navigator;return(a.language||a.browserLanguage||a.systemLanguage||a.userLanguage||"").split("-").join("_")},y=function(a){for(var b=[],d=angular.lowercase(a),e=0,f=q.length;f>e;e++)b.push(angular.lowercase(q[e]));if(b.indexOf(d)>-1)return d;if(c&&c[a]){var g=c[a];if(b.indexOf(angular.lowercase(g))>-1)return g}var h=a.split("_");return h.length>1&&b.indexOf(angular.lowercase(h[0]))>1?h[0]:void 0},z=function(a,b){if(!a&&!b)return p;if(a&&!b){if(angular.isString(a))return p[a]}else angular.isObject(p[a])||(p[a]={}),angular.extend(p[a],A(b));return this};this.translations=z,this.cloakClassName=function(a){return a?(u=a,this):u};var A=function(a,b,c,d){var e,f,g,h;b||(b=[]),c||(c={});for(e in a)a.hasOwnProperty(e)&&(h=a[e],angular.isObject(h)?A(h,b.concat(e),c,e):(f=b.length?""+b.join(w)+w+e:e,b.length&&e===d&&(g=""+b.join(w),c[g]="@:"+f),c[f]=h));return c};this.addInterpolation=function(a){return s.push(a),this},this.useMessageFormatInterpolation=function(){return this.useInterpolation("$translateMessageFormatInterpolation")},this.useInterpolation=function(a){return k=a,this},this.useSanitizeValueStrategy=function(a){return t=a,this},this.preferredLanguage=function(a){return a?(b=a,this):b},this.translationNotFoundIndicator=function(a){return this.translationNotFoundIndicatorLeft(a),this.translationNotFoundIndicatorRight(a),this},this.translationNotFoundIndicatorLeft=function(a){return a?(n=a,this):n},this.translationNotFoundIndicatorRight=function(a){return a?(o=a,this):o},this.fallbackLanguage=function(a){return B(a),this};var B=function(a){return a?(angular.isString(a)?(e=!0,d=[a]):angular.isArray(a)&&(e=!1,d=a),angular.isString(b)&&d.push(b),this):e?d[0]:d};this.use=function(a){if(a){if(!p[a]&&!l)throw new Error("$translateProvider couldn't find translationTable for langKey: '"+a+"'");return f=a,this}return f};var C=function(a){return a?(r=a,void 0):i?i+r:r};this.storageKey=C,this.useUrlLoader=function(a){return this.useLoader("$translateUrlLoader",{url:a})},this.useStaticFilesLoader=function(a){return this.useLoader("$translateStaticFilesLoader",a)},this.useLoader=function(a,b){return l=a,m=b||{},this},this.useLocalStorage=function(){return this.useStorage("$translateLocalStorage")},this.useCookieStorage=function(){return this.useStorage("$translateCookieStorage")},this.useStorage=function(a){return h=a,this},this.storagePrefix=function(a){return a?(i=a,this):a},this.useMissingTranslationHandlerLog=function(){return this.useMissingTranslationHandler("$translateMissingTranslationHandlerLog")},this.useMissingTranslationHandler=function(a){return j=a,this},this.usePostCompiling=function(a){return v=!!a,this},this.determinePreferredLanguage=function(a){var c=a&&angular.isFunction(a)?a():x();return q.length?(b=y(c),void 0):(b=c,this)},this.registerAvailableLanguageKeys=function(a,b){return a?(q=a,b&&(c=b),this):q},this.$get=["$log","$injector","$rootScope","$q",function(a,c,i,q){var w,x,y,D=c.get(k||"$translateDefaultInterpolation"),E=!1,F={},G={},H=function(a,c,e){var g=q.defer();a=a.trim();var i=function(){var a=b?G[b]:G[f];if(x=0,h&&!a){var c=w.get(r);if(a=G[c],d&&d.length){var e=I(d,c);x=e>-1?e+=1:0,d.push(b)}}return a}();return i?i.then(function(){T(a,c,e).then(g.resolve,g.reject)},g.reject):T(a,c,e).then(g.resolve,g.reject),g.promise},I=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},J=function(a){return n&&(a=[n,a].join(" ")),o&&(a=[a,o].join(" ")),a},K=function(a){f=a,i.$emit("$translateChangeSuccess"),h&&w.set(H.storageKey(),f),D.setLocale(f),angular.forEach(F,function(a,b){F[b].setLocale(f)}),i.$emit("$translateChangeEnd")},L=function(a){if(!a)throw"No language key specified for loading.";var b=q.defer();return i.$emit("$translateLoadingStart"),E=!0,c.get(l)(angular.extend(m,{key:a})).then(function(c){var d={};i.$emit("$translateLoadingSuccess"),angular.isArray(c)?angular.forEach(c,function(a){angular.extend(d,A(a))}):angular.extend(d,A(c)),E=!1,b.resolve({key:a,table:d}),i.$emit("$translateLoadingEnd")},function(a){i.$emit("$translateLoadingError"),b.reject(a),i.$emit("$translateLoadingEnd")}),b.promise};if(h&&(w=c.get(h),!w.get||!w.set))throw new Error("Couldn't use storage '"+h+"', missing get() or set() method!");angular.isFunction(D.useSanitizeValueStrategy)&&D.useSanitizeValueStrategy(t),s.length&&angular.forEach(s,function(a){var d=c.get(a);d.setLocale(b||f),angular.isFunction(d.useSanitizeValueStrategy)&&d.useSanitizeValueStrategy(t),F[d.getInterpolationIdentifier()]=d});var M=function(a){var b=q.defer();return p.hasOwnProperty(a)?(b.resolve(p[a]),b.promise):(G[a].then(function(a){z(a.key,a.table),b.resolve(a.table)},b.reject),b.promise)},N=function(a,b,c,d){var e=q.defer();return M(a).then(function(g){g.hasOwnProperty(b)?(d.setLocale(a),e.resolve(d.interpolate(g[b],c)),d.setLocale(f)):e.reject()},e.reject),e.promise},O=function(a,b,c,d){var e,g=p[a];return g.hasOwnProperty(b)&&(d.setLocale(a),e=d.interpolate(g[b],c),d.setLocale(f)),e},P=function(a,b,c,e){var f=q.defer();if(a<d.length){var g=d[a];N(g,b,c,e).then(function(a){f.resolve(a)},function(){var d=P(a+1,b,c,e);f.resolve(d)})}else f.resolve(b);return f.promise},Q=function(a,b,c,e){var f;if(a<d.length){var g=d[a];f=O(g,b,c,e),f||(f=Q(a+1,b,c,e))}return f},R=function(a,b,c){return P(y>0?y:x,a,b,c)},S=function(a,b,c){return Q(y>0?y:x,a,b,c)},T=function(a,b,e){var g=q.defer(),h=f?p[f]:p,i=e?F[e]:D;if(h&&h.hasOwnProperty(a)){var k=h[a];"@:"===k.substr(0,2)?H(k.substr(2),b,e).then(g.resolve,g.reject):g.resolve(i.interpolate(k,b))}else j&&!E&&c.get(j)(a,f),f&&d&&d.length?R(a,b,i).then(function(a){g.resolve(a)},function(a){g.reject(J(a))}):g.reject(J(a));return g.promise},U=function(a,b,e){var g,h=f?p[f]:p,i=e?F[e]:D;if(h&&h.hasOwnProperty(a)){var k=h[a];g="@:"===k.substr(0,2)?U(k.substr(2),b,e):i.interpolate(k,b)}else j&&!E&&c.get(j)(a,f),f&&d&&d.length?(x=0,g=S(a,b,i)):g=J(a);return g};if(H.preferredLanguage=function(){return b},H.cloakClassName=function(){return u},H.fallbackLanguage=function(a){if(void 0!==a&&null!==a){if(B(a),l&&d&&d.length)for(var b=0,c=d.length;c>b;b++)G[d[b]]||(G[d[b]]=L(d[b]));H.use(H.use())}return e?d[0]:d},H.useFallbackLanguage=function(a){if(void 0!==a&&null!==a)if(a){var b=I(d,a);b>-1&&(y=b)}else y=0},H.proposedLanguage=function(){return g},H.storage=function(){return w},H.use=function(a){if(!a)return f;var b=q.defer();return i.$emit("$translateChangeStart"),!p[a]&&l?(g=a,G[a]=L(a).then(function(a){g=void 0,z(a.key,a.table),b.resolve(a.key),K(a.key)},function(a){g=void 0,i.$emit("$translateChangeError"),b.reject(a),i.$emit("$translateChangeEnd")})):(b.resolve(a),K(a)),b.promise},H.storageKey=function(){return C()},H.isPostCompilingEnabled=function(){return v},H.refresh=function(a){function b(){e.resolve(),i.$emit("$translateRefreshEnd")}function c(){e.reject(),i.$emit("$translateRefreshEnd")}if(!l)throw new Error("Couldn't refresh translation table, no loader registered!");var e=q.defer();if(i.$emit("$translateRefreshStart"),a)p[a]?L(a).then(function(c){z(c.key,c.table),a===f&&K(f),b()},c):c();else{var g=[];if(d&&d.length)for(var h=0,j=d.length;j>h;h++)g.push(L(d[h]));f&&g.push(L(f)),q.all(g).then(function(a){angular.forEach(a,function(a){p[a.key]&&delete p[a.key],z(a.key,a.table)}),b()})}return e.promise},H.instant=function(a,c,e){a=a.trim();var g,h=[];b&&h.push(b),f&&h.push(f),d&&d.length&&(h=h.concat(d));for(var i=0,j=h.length;j>i;i++){var k=h[i];p[k]&&p[k][a]&&(g=U(a,c,e))}return g||(g=a),g},l&&(angular.equals(p,{})&&H.use(H.use()),d&&d.length))for(var V=0,W=d.length;W>V;V++)G[d[V]]=L(d[V]);return H}]}]),angular.module("pascalprecht.translate").factory("$translateDefaultInterpolation",["$interpolate",function(a){var b,c={},d="default",e=null,f={escaped:function(a){var b={};for(var c in a)a.hasOwnProperty(c)&&(b[c]=angular.element("<div></div>").text(a[c]).html());return b}},g=function(a){var b;return b=angular.isFunction(f[e])?f[e](a):a};return c.setLocale=function(a){b=a},c.getInterpolationIdentifier=function(){return d},c.useSanitizeValueStrategy=function(a){return e=a,this},c.interpolate=function(b,c){return e&&(c=g(c)),a(b)(c)},c}]),angular.module("pascalprecht.translate").constant("$STORAGE_KEY","NG_TRANSLATE_LANG_KEY"),angular.module("pascalprecht.translate").directive("translate",["$translate","$q","$interpolate","$compile","$parse","$rootScope",function(a,b,c,d,e,f){return{restrict:"AE",scope:!0,compile:function(b,g){var h=g.translateValues?g.translateValues:void 0,i=g.translateInterpolation?g.translateInterpolation:void 0,j=b[0].outerHTML.match(/translate-value-+/i);return function(b,k,l){if(b.interpolateParams={},l.$observe("translate",function(a){b.translationId=angular.equals(a,"")||!angular.isDefined(a)?c(k.text().replace(/^\s+|\s+$/g,""))(b.$parent):a}),h&&l.$observe("translateValues",function(a){a&&b.$parent.$watch(function(){angular.extend(b.interpolateParams,e(a)(b.$parent))})}),j){var m=function(a){l.$observe(a,function(c){b.interpolateParams[angular.lowercase(a.substr(14))]=c})};for(var n in l)l.hasOwnProperty(n)&&"translateValue"===n.substr(0,14)&&"translateValues"!==n&&m(n)}var o=function(b,c){k.html(b);var e=a.isPostCompilingEnabled(),f="undefined"!=typeof g.translateCompile,h=f&&"false"!==g.translateCompile;(e&&!f||h)&&d(k.contents())(c)},p=function(){return h||j?function(){b.$watch("interpolateParams",function(c){b.translationId&&c&&a(b.translationId,c,i).then(function(a){o(a,b)},function(a){o(a,b)})},!0)}:function(){var c=b.$watch("translationId",function(d){b.translationId&&d&&a(d,{},i).then(function(a){o(a,b),c()},function(a){o(a,b),c()})},!0)}}(),q=f.$on("$translateChangeSuccess",p);p(),b.$on("$destroy",q)}}}}]),angular.module("pascalprecht.translate").directive("translateCloak",["$rootScope","$translate",function(a,b){return{compile:function(c){a.$on("$translateLoadingSuccess",function(){c.removeClass(b.cloakClassName())}),c.addClass(b.cloakClassName())}}}]),angular.module("pascalprecht.translate").filter("translate",["$parse","$translate",function(a,b){return function(c,d,e){return angular.isObject(d)||(d=a(d)()),b.instant(c,d,e)}}]);
+/*! responsive-nav.js 1.0.25
+ * https://github.com/viljamis/responsive-nav.js
+ * http://responsive-nav.com
+ *
+ * Copyright (c) 2013 @viljamis
+ * Available under the MIT license
+ */
+
+(function () {
+
+  "use strict";
+
+  /* exported responsiveNav */
+  var responsiveNav = function (el, options) {
+  
+    var computed = !!window.getComputedStyle;
+    
+    // getComputedStyle polyfill
+    if (!computed) {
+      window.getComputedStyle = function(el) {
+        this.el = el;
+        this.getPropertyValue = function(prop) {
+          var re = /(\-([a-z]){1})/g;
+          if (prop === "float") {
+            prop = "styleFloat";
+          }
+          if (re.test(prop)) {
+            prop = prop.replace(re, function () {
+              return arguments[2].toUpperCase();
+            });
+          }
+          return el.currentStyle[prop] ? el.currentStyle[prop] : null;
+        };
+        return this;
+      };
+    }
+    /* exported addEvent, removeEvent, getChildren, setAttributes, addClass, removeClass */
+    // fn arg can be an object or a function, thanks to handleEvent
+    // read more at: http://www.thecssninja.com/javascript/handleevent
+    var addEvent = function (el, evt, fn, bubble) {
+        if ("addEventListener" in el) {
+          // BBOS6 doesn't support handleEvent, catch and polyfill
+          try {
+            el.addEventListener(evt, fn, bubble);
+          } catch (e) {
+            if (typeof fn === "object" && fn.handleEvent) {
+              el.addEventListener(evt, function (e) {
+                // Bind fn as this and set first arg as event object
+                fn.handleEvent.call(fn, e);
+              }, bubble);
+            } else {
+              throw e;
+            }
+          }
+        } else if ("attachEvent" in el) {
+          // check if the callback is an object and contains handleEvent
+          if (typeof fn === "object" && fn.handleEvent) {
+            el.attachEvent("on" + evt, function () {
+              // Bind fn as this
+              fn.handleEvent.call(fn);
+            });
+          } else {
+            el.attachEvent("on" + evt, fn);
+          }
+        }
+      },
+    
+      removeEvent = function (el, evt, fn, bubble) {
+        if ("removeEventListener" in el) {
+          try {
+            el.removeEventListener(evt, fn, bubble);
+          } catch (e) {
+            if (typeof fn === "object" && fn.handleEvent) {
+              el.removeEventListener(evt, function (e) {
+                fn.handleEvent.call(fn, e);
+              }, bubble);
+            } else {
+              throw e;
+            }
+          }
+        } else if ("detachEvent" in el) {
+          if (typeof fn === "object" && fn.handleEvent) {
+            el.detachEvent("on" + evt, function () {
+              fn.handleEvent.call(fn);
+            });
+          } else {
+            el.detachEvent("on" + evt, fn);
+          }
+        }
+      },
+    
+      getChildren = function (e) {
+        if (e.children.length < 1) {
+          throw new Error("The Nav container has no containing elements");
+        }
+        // Store all children in array
+        var children = [];
+        // Loop through children and store in array if child != TextNode
+        for (var i = 0; i < e.children.length; i++) {
+          if (e.children[i].nodeType === 1) {
+            children.push(e.children[i]);
+          }
+        }
+        return children;
+      },
+    
+      setAttributes = function (el, attrs) {
+        for (var key in attrs) {
+          el.setAttribute(key, attrs[key]);
+        }
+      },
+    
+      addClass = function (el, cls) {
+        if (el.className.indexOf(cls) !== 0) {
+          el.className += " " + cls;
+          el.className = el.className.replace(/(^\s*)|(\s*$)/g,"");
+        }
+      },
+    
+      removeClass = function (el, cls) {
+        var reg = new RegExp("(\\s|^)" + cls + "(\\s|$)");
+        el.className = el.className.replace(reg, " ").replace(/(^\s*)|(\s*$)/g,"");
+      };
+  
+    var nav,
+      opts,
+      navToggle,
+      styleElement = document.createElement("style"),
+      hasAnimFinished,
+      navOpen;
+  
+    var ResponsiveNav = function (el, options) {
+        var i;
+  
+        // Default options
+        this.options = {
+          animate: true,             // Boolean: Use CSS3 transitions, true or false
+          transition: 250,           // Integer: Speed of the transition, in milliseconds
+          label: "Menu",             // String: Label for the navigation toggle
+          insert: "after",           // String: Insert the toggle before or after the navigation
+          customToggle: "",          // Selector: Specify the ID of a custom toggle
+          openPos: "relative",       // String: Position of the opened nav, relative or static
+          navClass: "nav-collapse",  // String: Default CSS class. If changed, you need to edit the CSS too!
+          jsClass: "js",             // String: 'JS enabled' class which is added to <html> element
+          init: function(){},        // Function: Init callback
+          open: function(){},        // Function: Open callback
+          close: function(){}        // Function: Close callback
+        };
+  
+        // User defined options
+        for (i in options) {
+          this.options[i] = options[i];
+        }
+  
+        // Adds "js" class for <html>
+        addClass(document.documentElement, this.options.jsClass);
+  
+        // Wrapper
+        this.wrapperEl = el.replace("#", "");
+        if (document.getElementById(this.wrapperEl)) {
+          this.wrapper = document.getElementById(this.wrapperEl);
+        } else if (document.querySelector(this.wrapperEl)) {
+          this.wrapper = document.querySelector(this.wrapperEl);
+        } else {
+          // If el doesn't exists, stop here.
+          throw new Error("The nav element you are trying to select doesn't exist");
+        }
+  
+        // Inner wrapper
+        this.wrapper.inner = getChildren(this.wrapper);
+  
+        // For minification
+        opts = this.options;
+        nav = this.wrapper;
+  
+        // Init
+        this._init(this);
+      };
+  
+    ResponsiveNav.prototype = {
+  
+      // Public methods
+      destroy: function () {
+        this._removeStyles();
+        removeClass(nav, "closed");
+        removeClass(nav, "opened");
+        removeClass(nav, opts.navClass);
+        nav.removeAttribute("style");
+        nav.removeAttribute("aria-hidden");
+  
+        removeEvent(window, "resize", this, false);
+        removeEvent(document.body, "touchmove", this, false);
+        removeEvent(navToggle, "touchstart", this, false);
+        removeEvent(navToggle, "touchend", this, false);
+        removeEvent(navToggle, "mouseup", this, false);
+        removeEvent(navToggle, "keyup", this, false);
+        removeEvent(navToggle, "click", this, false);
+  
+        if (!opts.customToggle) {
+          navToggle.parentNode.removeChild(navToggle);
+        } else {
+          navToggle.removeAttribute("aria-hidden");
+        }
+      },
+  
+      toggle: function () {
+        if (hasAnimFinished === true) {
+          if (!navOpen) {
+            removeClass(nav, "closed");
+            addClass(nav, "opened");
+            nav.style.position = opts.openPos;
+            setAttributes(nav, {"aria-hidden": "false"});
+  
+            navOpen = true;
+            opts.open();
+          } else {
+            removeClass(nav, "opened");
+            addClass(nav, "closed");
+            setAttributes(nav, {"aria-hidden": "true"});
+  
+            if (opts.animate) {
+              hasAnimFinished = false;
+              setTimeout(function () {
+                nav.style.position = "absolute";
+                hasAnimFinished = true;
+              }, opts.transition + 10);
+            } else {
+              nav.style.position = "absolute";
+            }
+  
+            navOpen = false;
+            opts.close();
+          }
+        }
+      },
+  
+      resize: function () {
+        if (window.getComputedStyle(navToggle, null).getPropertyValue("display") !== "none") {
+          setAttributes(navToggle, {"aria-hidden": "false"});
+  
+          // If the navigation is hidden
+          if (nav.className.match(/(^|\s)closed(\s|$)/)) {
+            setAttributes(nav, {"aria-hidden": "true"});
+            nav.style.position = "absolute";
+          }
+  
+          this._createStyles();
+          this._calcHeight();
+        } else {
+          setAttributes(navToggle, {"aria-hidden": "true"});
+          setAttributes(nav, {"aria-hidden": "false"});
+          nav.style.position = opts.openPos;
+          this._removeStyles();
+        }
+      },
+  
+      handleEvent: function (e) {
+        var evt = e || window.event;
+  
+        switch (evt.type) {
+        case "touchstart":
+          this._onTouchStart(evt);
+          break;
+        case "touchmove":
+          this._onTouchMove(evt);
+          break;
+        case "touchend":
+        case "mouseup":
+          this._onTouchEnd(evt);
+          break;
+        case "click":
+          this._preventDefault(evt);
+          break;
+        case "keyup":
+          this._onKeyUp(evt);
+          break;
+        case "resize":
+          this.resize(evt);
+          break;
+        }
+      },
+  
+      // Private methods
+      _init: function () {
+        addClass(nav, opts.navClass);
+        addClass(nav, "closed");
+        hasAnimFinished = true;
+        navOpen = false;
+  
+        this._createToggle();
+        this._transitions();
+        this.resize();
+  
+        // IE8 hack
+        var self = this;
+        setTimeout(function () {
+          self.resize();
+        }, 20);
+  
+        addEvent(window, "resize", this, false);
+        addEvent(document.body, "touchmove", this, false);
+        addEvent(navToggle, "touchstart", this, false);
+        addEvent(navToggle, "touchend", this, false);
+        addEvent(navToggle, "mouseup", this, false);
+        addEvent(navToggle, "keyup", this, false);
+        addEvent(navToggle, "click", this, false);
+  
+        // Init callback
+        opts.init();
+      },
+  
+      _createStyles: function () {
+        if (!styleElement.parentNode) {
+          styleElement.type = "text/css";
+          document.getElementsByTagName("head")[0].appendChild(styleElement);
+        }
+      },
+  
+      _removeStyles: function () {
+        if (styleElement.parentNode) {
+          styleElement.parentNode.removeChild(styleElement);
+        }
+      },
+  
+      _createToggle: function () {
+        if (!opts.customToggle) {
+          var toggle = document.createElement("a");
+          toggle.innerHTML = opts.label;
+          setAttributes(toggle, {
+            "href": "#",
+            "class": "nav-toggle"
+          });
+  
+          if (opts.insert === "after") {
+            nav.parentNode.insertBefore(toggle, nav.nextSibling);
+          } else {
+            nav.parentNode.insertBefore(toggle, nav);
+          }
+  
+          navToggle = toggle;
+        } else {
+          var toggleEl = opts.customToggle.replace("#", "");
+  
+          if (document.getElementById(toggleEl)) {
+            navToggle = document.getElementById(toggleEl);
+          } else if (document.querySelector(toggleEl)) {
+            navToggle = document.querySelector(toggleEl);
+          } else {
+            throw new Error("The custom nav toggle you are trying to select doesn't exist");
+          }
+        }
+      },
+  
+      _preventDefault: function(e) {
+        if (e.preventDefault) {
+          e.preventDefault();
+          e.stopPropagation();
+        } else {
+          e.returnValue = false;
+        }
+      },
+  
+      _onTouchStart: function (e) {
+        e.stopPropagation();
+        addClass(nav, "disable-pointer-events");
+        this.startX = e.touches[0].clientX;
+        this.startY = e.touches[0].clientY;
+        this.touchHasMoved = false;
+        removeEvent(navToggle, "mouseup", this, false);
+      },
+  
+      _onTouchMove: function (e) {
+        if (Math.abs(e.touches[0].clientX - this.startX) > 10 ||
+        Math.abs(e.touches[0].clientY - this.startY) > 10) {
+          this.touchHasMoved = true;
+        }
+      },
+  
+      _onTouchEnd: function (e) {
+        this._preventDefault(e);
+        if (!this.touchHasMoved) {
+          if (e.type === "touchend") {
+            this.toggle(e);
+            setTimeout(function () {
+              removeClass(nav, "disable-pointer-events");
+            }, opts.transition + 300);
+            return;
+          } else {
+            var evt = e || window.event;
+            // If it isn't a right click
+            if (!(evt.which === 3 || evt.button === 2)) {
+              this.toggle(e);
+            }
+          }
+        }
+      },
+  
+      _onKeyUp: function (e) {
+        var evt = e || window.event;
+        if (evt.keyCode === 13) {
+          this.toggle(e);
+        }
+      },
+  
+      _transitions: function () {
+        if (opts.animate) {
+          var objStyle = nav.style,
+            transition = "max-height " + opts.transition + "ms";
+  
+          objStyle.WebkitTransition = transition;
+          objStyle.MozTransition = transition;
+          objStyle.OTransition = transition;
+          objStyle.transition = transition;
+        }
+      },
+  
+      _calcHeight: function () {
+        var savedHeight = 0;
+        for (var i = 0; i < nav.inner.length; i++) {
+          savedHeight += nav.inner[i].offsetHeight;
+        }
+        var innerStyles = "." + opts.navClass + ".opened{max-height:" + savedHeight + "px !important}";
+  
+        if (styleElement.styleSheet) {
+          styleElement.styleSheet.cssText = innerStyles;
+        } else {
+          styleElement.innerHTML = innerStyles;
+        }
+  
+        innerStyles = "";
+      }
+  
+    };
+  
+    return new ResponsiveNav(el, options);
+  
+  };
+
+  window.responsiveNav = responsiveNav;
+
+}());
 angular.module("xenium", [
 		'pascalprecht.translate'
 
@@ -228,9 +669,10 @@ angular.module("xenium", [
      $translateProvider.preferredLanguage('en');
 }])
 .controller('MainCtrl', ['$scope', '$translate', function ($scope, $translate) {
-	$scope.changeLanguage = function (langKey) {
-        $translate.uses(langKey);
-    };
+	$scope.changeLanguage = function (key) {
+	    $translate.use(key);
+	    $scope.lang = !$scope.lang;
+	  };
 }])
 
 var $sections=[],
@@ -248,27 +690,32 @@ $doc.ready(function(){
 	$(window).resize();
 
 
-	// Create the dropdown base
-	$("<select />").appendTo(".inner");
-	// Create default option "Go to..."
-	$("<option />", {
-	   "selected": "selected",
-	   "value"   : "",
-	   "text"    : "Go to..."
-	}).appendTo(".inner select");
+	// // Create the dropdown base
+	// $("<select />").appendTo(".inner");
+	// // Create default option "Go to..."
+	// $("<option />", {
+	//    "selected": "selected",
+	//    "value"   : "",
+	//    "text"    : "Go to..."
+	// }).appendTo(".inner select");
 
-	// Populate dropdown with menu items
-	$(".nav a").each(function() {
-	 var el = $(this);
-	 $("<option />", {
-	     "value"   : el.attr("href"),
-	     "text"    : el.text()
-	 }).appendTo(".inner select");
-	});
+	// // Populate dropdown with menu items
+	// $(".nav a").each(function() {
+	//  var el = $(this);
+	//  $("<option />", {
+	//      "value"   : el.attr("href"),
+	//      "text"    : el.text()
+	//  }).appendTo(".inner select");
+	// });
 
-	$(".inner select").change(function() {
-	  window.location = $(this).find("option:selected").val();
-	});
+	// $(".inner select").change(function() {
+	//   window.location = $(this).find("option:selected").val();
+	// });var nav = responsiveNav(".nav-collapse");
+	var nav = responsiveNav(".nav", { 
+        label: "&#9776;", // String: Label for the navigation toggle/
+        customToggle: "", // Selector: Specify the ID of a custom toggle
+        openPos: "relative", // String: Position of the opened nav, relative or static/
+    });
 })
 
 $doc.scroll(function(e){
@@ -297,13 +744,14 @@ var dictBG = {
     "RANGE":"Обхват",
     "AUDIENCE":"Аудитория",
     "BRAND": "Бранд",
-    "LEADING MEDIA COMPANY":"Водеща медийна компания в България.",
+    "CONTACT":"Контакт",
+    "LEADING MEDIA COMPANY":"Xenium е водеща медийна компания в България.",
     "MEDIA KIT":"МЕДИА КИТ",
     "AUDIENCE REACH":"Медиен обхват на аудиторията",
     "AUDIENCE PROFILE":"Профил на аудиторията",
     "FEMALE":"жени",
     "MALE":"мъже",
-    "ON A DAILY BASIS":"всекидневно използват интернет",
+    "ON A DAILY BASIS":"всекидневно използват Интернет",
     "MIDDLE AND HIGH INCOME":"среден и <br />висок<br /> доход",
     "MLNS":"млн",
     "SECONDARY AND HIGHER EDUCATION":"средно и висше образование",
@@ -322,24 +770,24 @@ var dictBG = {
     "SECONDARY":"Средно",
     "COLLEGE":"Полувисше",
     "HIGHER":"Висше",
-    "CITY LIFE MEDIUM":"Медия за градски живот има за цел, чрез стойностното си съдържание, да носи <strong>положителни емоции в ежедневието на хората.</strong>",
-    "ENTERTAINS AND INFORMS THE YOUNG MODERN PERSON":"Развлича и информира младие и модерен човек за всичко ново, което се случва в областите на  <strong> мода, музика, кино, популярни личности, събития, нови технологии, изкуство и пътувания</strong>.",
+    "CITY LIFE MEDIUM":"Медия за градски живот, която има за цел да носи <strong>положителни емоции в ежедневието на хората</strong> чрез стойностното си съдържание.",
+    "ENTERTAINS AND INFORMS THE YOUNG MODERN PERSON":"Развлича и информира младия и модерен човек за всичко ново, което се случва в областите <strong> мода, музика, кино, популярни личности, събития, нови технологии, изкуство и пътувания</strong>.",
     "KULINARIA IS MEDIA":"<strong>Kulinaria.bg</strong> е медия за вкусно и здравословно хранене",
     "PRESENTS IN AN ORIGINAL AND":"По оригинален и достъпен начин, представя <strong> най-доброто от традиционната и модерна кухня, майстор-готвачи, места с добра кухня и атмосфера</strong>",
-    "TERMO IS A SITE FOR TRAVEL":"<strong>Termo.bg</strong> е сайт за пътувания и забавление за всяко време. Представя най-интересното от необятния свят на пътешествията.",
+    "TERMO IS A SITE FOR TRAVEL":"<strong>Termo.bg</strong> е сайт за пътувания и забавление за всяко време. ",
     "RECOMMENDS UPCOMING EVENTS":"Препоръчва предстоящи събития, забележителности, заведения, хотели, шопинг възможности в страната и чужбина.",
     "PRESENTS DETAILED 15 DAY":"Представя детайлна 15-дневна прогноза за времето в над 200 000 локации",
     "HARDWARE IS THE MOST POPULAR HARDWARE":"<strong>Hardware.bg</strong> е най-популярния сайт за хардуер, софтуер и техологии в страната",
     "EXCEPTIONALLY WELL DEVELOPED FORUM":"Разполага с изключително развит форум.",
-    "MOBILITY UNITES":"<strong>Mobility.bg</strong> - обединява тритр най-популярни сайта за фенове на мобилни телефони<strong>iPhone-Bulgaria.com, WinPhone.bg, AllAndroid.com</strong> посещава се от аудитория, която <strong>се интересува от най-новото в света на мобилните технологии и има сериозни познания в областта</strong>",
-    "IN 2013 MOBILE":"През 2013 година <strong>Ксениум Медиа</strong> започва да предлага ексклузивно за България <strong>mobile.de</strong> и трафика ба жългарската аудитория в него.",
-    "THE AUDIENCE CONSISTS":"Аудиторията е предимно <strong>млади хора, с високи доходи</strong>, търсещи автомобили за покупка, с цена над 5000 евро.",
+    "MOBILITY UNITES":"<strong>Mobility.bg</strong> - обединява трите най-популярни сайта за фенове на мобилни телефони: <strong>iPhone-Bulgaria.com, WinPhone.bg, AllAndroid.com</strong>.",
+    "MOBILITY ITS AUDIENCE":"Посещава се от аудитория, която <strong>се интересува от най-новото в света на мобилните технологии и има сериозни познания в областта</strong>.",
+    "IN 2013 MOBILE":"През 2013 година <strong>Xenium Media</strong> започва да предлага ексклузивно за България <strong>mobile.de</strong> и трафика на българската аудитория в него.",
+    "THE AUDIENCE CONSISTS":"Аудиторията е предимно <strong>млади хора с високи доходи</strong>, търсещи автомобили за покупка с цена над 5000 евро.",
     "CALCULATOR FOR EVERYTHING":"<strong>Calculator.bg</strong> - за всичко и за всички.",
     "FACILITATES ANY CALCULATION":"Улеснява всяко едно изчисление.",
-    "YOU CAN CALCULATE":"Можеш да изчислиш <strong> заплата, валута, лихвинотариални такси, данъци и др.</strong>",
+    "YOU CAN CALCULATE":"Можеш да изчислиш <strong> заплата, валута, лихви, нотариални такси, данъци и др.</strong>",
     "MEGANEWS IS AN INFORMATION SITE":"<strong>Meganews.bg</strong> е информационен сайт, който показва най-горещите факти от деня такива, каквито са.",
     "OUR MISSION IS TO IMPARTIALLY INFORM":"Мисията ни е да информираме безпристрастно аудиторията, давайки свобода на читателите сами да изразяват гражданската си позиция.",
-
     "NIEJENITE IS A SITE":"<strong>Nie-jenite.bg</strong> е сайт за модерната и успяла жена, интересуваща се <strong>мода, красота, задраве, любов, дизайн и полезни съвети</strong>",
     "THE MEDIUM ALLOWS ITS USERS":"Медията позволява на потребителите да оценяват и коментират публикации, да споделят и обсъждат своите проблеми и истории.",
     "MEGALIFE IS A DEVELOPED":"<strong>Megalife.bg</strong> е развита и успешна лайфстайл медия, която има за цел да информира и забавлява потребителите си с богато разнообразие от съдържателни публикации",
@@ -348,15 +796,38 @@ var dictBG = {
     "IT PRESENTS IN THE MOST":"Представя максимално достъпно най-добрите рецепти като акцентът е върху здравословното хранене и начин на живот. Аудиорията е предимно от жени, от добрата кухня и здраве.",
     "KIDAMOM IS A FUN":"<strong>Kidamom.com</strong> забавна интерактивна среда за вашето дете с много анимационни и образователни филми.",
     "XENIUM MEDIA COMPANY TOGETHER WITH":"Xenium Media Company с удоволствие ви представя онлайн проекта Kidamom.com, съвместно с Кидамом ООД и Eleven. Kidamom.com предоставя интерактивна среда за деца до 12 години. В специализирания сайт подрастващите обогатяват своите уменията и знанията по забавен и достъпен начин.",
-    "KIDAMOM IS A PLACE":"Kidamom.com е място, в което децата се въвеждат в съвременния дигитален свят, развивайки своите личностни качества и индивидуални навици. Платформата предлагаме подбрано качествено съдържание и възможност за родителски контрол.",
+    "KIDAMOM IS A PLACE":"Kidamom.com е място, в което децата се въвеждат в съвременния дигитален свят, развивайки своите личностни качества и индивидуални навици. Платформата предлага подбрано качествено съдържание и възможност за родителски контрол.",
     "SHVARGALO IS AN ART COMPANY":"<strong>Shvargalo.com</strong> е арт компания, която се занимава с <strong> продуциране и произвеждане на филми, книги, спектакли, музикално-танцови и сценични произведения.</strong>",
     "KAMEN DONEV AND ELENA BOZOVA":"В проекта взимат участие <strong> Камен Донев (режисьор и актьор) Елена Бозова (актьор)</strong> в компанията на именити български актьори.",
-    "THE AUDIENCE CONSISTS OF":"Аудиторията е <strong> мъже и жени на възраст между 20 и 40 години,</strong> жители на големи и средни градове, икономически активни потребители, интересуващи се от <strong> мъже и жени на възраст между 20 и 40 години,</strong> култура, изкуство и развлечения.",
+    "THE AUDIENCE CONSISTS OF":"Аудиторията се състои <strong> мъже и жени на възраст между 20 и 40 години,</strong> жители на големи и средни градове, икономически активни потребители, интересуващи се от <strong> култура, изкуство и развлечения</strong>.",
     "NONSTANDARD FORMATS":"НЕСТАРДАНТНИ ФОРМАТИ",
     "CLIENT":"Клиент: ",
     "NESCAFE: THE GAME ATTRACTED":"Играта се проведе при голям интерес и за периода на конкурса получихме над 70 авторски рецепти. Страницата на конкурса беше широко промотирана в сайтовете на Xenium Media и за периода на кампанията беше посетена от над 50 000 потребители и събра над 20 000 харесвания на рецептите във Facebook.",
     "NESCAFE: THE CONTEST WEBPAGE":" ",
     "TEFAL: THE GAME":"Играта се проведе при голям интерес от потребителите. Всеки един от тях представи своето любимо модно съчетание, като покани приятелите си да гласуват за неговата снимка. Играта се проведе в рамките на петнадесет дни, като беше промотирана чрез брандиране на Bulevard.bg.",
+    "TEFAL: THE GAME TOOK PLACE":" ",
+    "ESCADA: USERS CHOSE THE AROMA":"Потребителите избираха аромата, който най-много им допада и избора им се отразяваше и на стените им във Facebook.",
+    "ESCADA: THIS CREATED A VIRAL EFFECT":"Това създаде вирусен ефект и интерес сред приятелите им. Само за 20 дни кампанията събра близо 1000 участника и над 150 коментара. Постигнахме добра интеракция с марката и накарахме потребителите да се асоцират с различните аромати.",
+    "BRUNO: A GAME URGING MALE AUDIENCE":"Игра подтикваща мъжката аудитория да разглежда и избира сексапилни девойки и да пише под формата на коментар реплики за свалки.",
+    "BRUNO: MORE THAN 230 USERS":"За периода на играта са регистрирани над 230 потребители и над 230 постинга, които се състезават за наградата. Събрани бяха над 9000 гласа. Кампанията беше много добре отразена с PR в цялата мрежа от сайтове на Xenium Media.",
+    "PLESIO: THE VIDEO":"Видео клипът „От любов към технологиите“ е създаден като концепция и реализиран от екипа на Ксениум Медия. ",
+    "PLESIO: POPULARIZED":"Популяризирането му бе извършено чрез различните социални канали – Facebook, You Tube, Vimeo и др. и сайтовете на Ксениум Медия.",
+    "AMSTEL: BEER CEREMONY":"„Бирена церемония“ e нестандартен рекламен видео формат (дълъг е 02:51 минути) и носи всички характеристики на късометражен игрален филм.",
+    "AMSTEL: CONCEPT":"Концепцията и реализацията на видео клипа са на Ксениум Медия.",
+    "MAIN GRAPH":"<img class='graph' src='img/graph1.jpg' />",
+    "RANGE IMG":'<img src="img/range.png" height="522"/>',
+    "SVEJO DATA IMG":'<img src="img/media-data.png" />',
+    "BULEVARD DATA IMG":'<img src="img/bulevard-data.png" />',
+    "KULINARIA DATA IMG":'<img src="img/kulinaria-data.png" />',
+    "TERMO DATA IMG":'<img src="img/termo-data.png" />',
+    "HARDWARE DATA IMG":'<img src="img/hardware-data.png" />',
+    "MOBILITY DATA IMG":'<img src="img/mobility-data.png" />',
+    "MOBILE DATA IMG":'<img src="img/mobile-data.png" />',
+    "MEGANEWS DATA IMG":'<img src="img/meganews-data.png" />',
+    "JENITE DATA IMG":'<img src="img/jenite-data.png" />',
+    "MEGALIFE DATA IMG":'<img src="img/megalife-data.png" />',
+    "FOODS DATA IMG":'<img src="img/foods-data.png" />'
+
 
 }
 
@@ -365,7 +836,8 @@ var dictEN = {
     "RANGE":"Range",
     "AUDIENCE":"Audience",
     "BRAND": "Brand",
-    "LEADING MEDIA COMPANY":"Leading Bulgarian media company.",
+    "CONTACT":"Contact",
+    "LEADING MEDIA COMPANY":"Xenium is a leading Bulgarian media company.",
     "MEDIA KIT":"MEDIA KIT",
     "AUDIENCE REACH":"AUDIENCE REACH",
     "AUDIENCE PROFILE":"Audience Profile",
@@ -399,7 +871,8 @@ var dictEN = {
     "PRESENTS DETAILED 15 DAY":"Presents a detailed 15 day weather forecast for over 200,000 locations.",
     "HARDWARE IS THE MOST POPULAR HARDWARE":"<strong>Hardware.bg</strong> is the most popular hardware, software and technology  site in the country.",
     "EXCEPTIONALLY WELL DEVELOPED FORUM":"Has an exceptionally well developed forum.",
-    "MOBILITY UNITES":"<strong>Mobility.bg</strong> unites the three most popular sites for mobile phone fans: <strong>iPhoneBulgaria.com, WinPhone.bg</strong> and All4android.com. It's audience is <strong>interested in all the latest  in the mobile technology world and has substantial knowlege in the field</strong>.",
+    "MOBILITY UNITES":"<strong>Mobility.bg</strong> unites the three most popular sites for mobile phone fans: <strong>iPhoneBulgaria.com, WinPhone.bg</strong> and All4android.com.",
+    "MOBILITY ITS AUDIENCE":"It's audience is <strong>interested in all the latest  in the mobile technology world and has substantial knowlege in the field</strong>.",
     "IN 2013 MOBILE":"In 2013 <strong>Xenium Media</strong>  started offering exclusively for Bulgaria <strong>mobile.de</strong> and the Bulgarian audience traffic within it.",
     "THE AUDIENCE CONSISTS":"The audience consists mainly of <strong>young people with high income,</strong> looking to buy cars priced over 5,000 euro.",
     "CALCULATOR FOR EVERYTHING":"<strong>Calculator.bg</strong> - for everything and everyone.",
@@ -423,6 +896,28 @@ var dictEN = {
     "CLIENT":"Client: ",
     "NESCAFE: THE GAME ATTRACTED":"The game attracted huge interest and over 70 original recipes were received over the period of the contest. ",
     "NESCAFE: THE CONTEST WEBPAGE":"The contest  webpage was widely promoted on the Xenium Media websites. It was visited by more than 50,000 users and attracted over 20,000 Facebook likes of the recipes over the campaign period.",
-    "TEFAL: THE GAME":""
+    "TEFAL: THE GAME":"The game was accompanied by big user interest. Each of the users presented their favourite fashion ensemble and invited their friends to vote for their picture. ",
+    "TEFAL: THE GAME TOOK PLACE":"The game took place over 15 days and was promoted through branding of Bulevard.bg.",
+    "ESCADA: USERS CHOSE THE AROMA":"Users chose the aroma that best suited them and their choice was posted on their Facebook walls.",
+    "ESCADA: THIS CREATED A VIRAL EFFECT":"This created a viral effect and interest among their friends. Within just 20 days the campaign attracted almost 1,000 participants and over 150 comments. We achieved good interaction with the brand and encouraged the users to associate themselves with the various aromas.",
+    "BRUNO: A GAME URGING MALE AUDIENCE":"A game urging male audience to browse and choose sexy girls and to write pick­up lines in the form of comments.",
+    "BRUNO: MORE THAN 230 USERS":"More than 230 users and their postings, competing for the prize, were registered over the period of the game. Over 9,000 votes were cast. The campaign had a very good PR coverage in the entire Xenium Media website network.",
+    "PLESIO: THE VIDEO":"For The Love Of Technology video was created as a concept and shot by the Xenium Media team.",
+    "PLESIO: POPULARIZED":"It was popularized through various social channels - Facebook, YouTube, Vimeo, etc., as well as through Xenium Media's websites.",
+    "AMSTEL: BEER CEREMONY":"Beer ceremony is a nonstandard advertising video format (2:51 minutes long) and bears all the characteristics of a short fiction film.",
+    "AMSTEL: CONCEPT":"Xenium Media developed the concept and shot the video.",
+    "MAIN GRAPH":'<img class="graph" src="img/graphEn.png" />',
+    "RANGE IMG":'<img src="img/rangeEn.png" height="522"/>',
+    "SVEJO DATA IMG":'<img src="img/svejo-dataEn.png" />',
+    "BULEVARD DATA IMG":'<img src="img/bulevard-dataEn.png" />',
+    "KULINARIA DATA IMG":'<img src="img/kulinaria-dataEn.png" />',
+    "TERMO DATA IMG":'<img src="img/termo-dataEn.png" />',
+    "HARDWARE DATA IMG":'<img src="img/hardware-dataEn.png" />',
+    "MOBILITY DATA IMG":'<img src="img/mobility-dataEn.png" />',
+    "MOBILE DATA IMG":'<img src="img/mobile-dataEn.png" />',
+    "MEGANEWS DATA IMG":'<img src="img/meganews-dataEn.png" />',
+    "JENITE DATA IMG":'<img src="img/jenite-dataEn.png" />',
+    "MEGALIFE DATA IMG":'<img src="img/megalife-dataEn.png" />',
+    "FOODS DATA IMG":'<img src="img/foods-dataEn.png" />'
 
 }

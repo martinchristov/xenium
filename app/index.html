@@ -16,14 +16,18 @@
 		<div class="frame bottom"></div>
 		<div class="header">
 			<div class="inner">
-				<a href="#"><img src="img/x.jpg" alt="xenium"></a>
+				<a href="#"><img src="img/xenium.png" alt="xenium"></a>
 				<ul class="nav">
-					<li><a href="#portfolio" data-color="#26729c" translate="PORTFOLIO">портфолио </a></li>
-					<li><a href="#range" data-color="#e16a28" translate="RANGE">обхват</a></li>
-					<li><a href="#audience" data-color="#c9da3e" translate="AUDIENCE">аудитория</a></li>
-					<li><a href="#brands" data-color="#ea2825" translate="BRAND">бранд</a></li>
-					<li class="contact"><a href="#brands"><img src="img/contact.png" /></a></li>
+					<li><a href="#portfolio" data-color="#26729c" translate="PORTFOLIO"></a></li>
+					<li><a href="#range" data-color="#e16a28" translate="RANGE"></a></li>
+					<li><a href="#audience" data-color="#c9da3e" translate="AUDIENCE"></a></li>
+					<li><a href="#brands" data-color="#ea2825" translate="BRAND"></a></li>
+					<li class="contact"><a href="#contact"><img src="img/contact.png" /></a></li>
+					<li class="mobile-contact"><a href="#contact" translate="CONTACT"></a></li>
 				</ul>
+
+				<div class="lang" ng-model="lang" ng-show="lang"><a href="" ng-click="changeLanguage('bg')">bg</a></div>
+				<div class="lang" ng-model="lang" ng-show="!lang"><a href="" ng-click="changeLanguage('en')">en</a></div>
 			</div>
 		</div>
 		<div class="section-outer" id="home">
@@ -34,7 +38,7 @@
 				</div>
 				
 			</div>
-			<img class="graph" src="img/graph1.jpg" />
+			<span translate="MAIN GRAPH"><img class="graph" src="img/graph1.jpg" /></span>
 		</div>
 		
 		<div class="section-outer" id="portfolio">
@@ -67,7 +71,7 @@
 		<div class="section-outer" id="range">
 			<div class="section-inner">
 			<h2 translate="AUDIENCE REACH">Медиен обхват на аудиторията</h2>
-			<img src="img/range.png" height="522"/>
+			<span translate="RANGE IMG"><img src="img/range.png" height="522"/></span>
 			</div>
 		</div>
 		
@@ -186,22 +190,24 @@
 					<div class="bottom">
 						<div class="media-bottom">
 							<img src="img/laptop.png" />
-							<span class="topdata" translate="UNIQUE">Уникални</span> 
-							<small translate="MONTHLY USERS">потребители месечно:</small>
+							<span class="topdata" translate="UNIQUE"></span> 
+							<div class="center"><small translate="MONTHLY USERS"></small></div>
 							<span class="huge">1 200 000</span>
-							<img src="img/eye.png" style="padding-top: 30px;" />
-							<span class="topdata part" translate="IMPRESSIONS">Импресии</span> 
+							<hr style="width: 150px;"/>
+							<img class="impressions" src="img/eye.png" />
+							<span class="topdata part" translate="IMPRESSIONS"></span> 
 							<span class="huge">5 100 000</span>
 							<div class="mb-footer">
 								<span class="map">20%</span>
-								<span translate="AUDIENCE OF">Обхват на</span>
-								 <small translate="OF REACH">аудиторията</small>
+								<span translate="AUDIENCE OF"></span>
+								 <small translate="OF REACH"></small>
 							</div>
 						</div>
 						<div class="media-bottom right">
-							<img src="img/media-data.png" />
+							<span translate="SVEJO DATA IMG"></span>
+							<hr />
 							<div class="data">
-								<h4 translate="AGE">Възраст: </h4>
+								<h4 translate="AGE"> </h4>
 								<ul>
 									<li>15-24 <strong>33%</strong></li>
 									<li>25-34 <strong>24%</strong></li>
@@ -210,12 +216,13 @@
 									<li>55+ <strong>7%</strong></li>
 								</ul>							
 							</div>
+
 							<div class="data">
-								<h4 translate="EDUCATION">Образование: </h4>
+								<h4 translate="EDUCATION"> </h4>
 								<ul>
-									<li><span translate="SECONDARY">Средно</span> <strong>59%</strong></li>
-									<li><span translate="COLLEGE">Полувисше</span></span> <strong>5%</strong></li>
-									<li><span translate="HIGHER">Висше</span> <strong>24%</strong></li>
+									<li><span translate="SECONDARY"></span> <strong>59%</strong></li>
+									<li><span translate="COLLEGE"></span></span> <strong>5%</strong></li>
+									<li><span translate="HIGHER"></span> <strong>24%</strong></li>
 								</ul>							
 							</div>
 						</div>
@@ -228,29 +235,30 @@
 				<div class="brand-medias">
 					<img src="img/bulevard.png" />
 					<ul class="media-top bulevard">
-						<li translate="CITY LIFE MEDIUM">Медия за градски живот има за цел, чрез стойностното си съдържание, да носи <strong>положителни емоции в ежедневието на хората.</strong></li>
-						<li translate="ENTERTAINS AND INFORMS THE YOUNG MODERN PERSON">Развлича и информира младие и модерен човек за всичко ново, което се случва в областите на  <strong> мода, музика, кино, популярни личности, събития, нови технологии, изкуство и пътувания</strong>.</li>
+						<li translate="CITY LIFE MEDIUM"></li>
+						<li translate="ENTERTAINS AND INFORMS THE YOUNG MODERN PERSON"></li>
 					</ul>
 					
 					<div class="bottom">
 						<div class="media-bottom">
 							<img src="img/laptop.png" />
-							<span class="topdata" translate="UNIQUE">Уникални</span> 
-							<small translate="MONTHLY USERS">потребители месечно:</small>
+							<span class="topdata" translate="UNIQUE"></span> 
+							<div class="center"><small translate="MONTHLY USERS"></small></div>
 							<span class="huge">187 000</span>
-							<img src="img/eye.png" style="padding-top: 30px;" />
-							<span class="topdata part" translate="IMPRESSIONS">Импресии</span> 
+							<hr style="width: 150px;"/>
+							<img class="impressions" src="img/eye.png" />
+							<span class="topdata part" translate="IMPRESSIONS"></span> 
 							<span class="huge">1 330 000</span>
 							<div class="mb-footer">
 								<span class="map">4%</span>
-								<span translate="AUDIENCE OF">Обхват на</span>
-								 <small translate="OF REACH">аудиторията</small>
+								<span translate="AUDIENCE OF"></span>
+								 <small translate="OF REACH"></small>
 							</div>
 						</div>
 						<div class="media-bottom right">
-							<img src="img/bulevard-data.png" />
+							<span translate="BULEVARD DATA IMG"></span>
 							<div class="data">
-								<h4 translate="AGE">Възраст: </h4>
+								<h4 translate="AGE"> </h4>
 								<ul>
 									<li>15-24 <strong>33%</strong></li>
 									<li>25-34 <strong>24%</strong></li>
@@ -260,11 +268,11 @@
 								</ul>							
 							</div>
 							<div class="data">
-								<h4  translate="EDUCATION">Образование: </h4>
+								<h4  translate="EDUCATION"> </h4>
 								<ul>
-									<li><span translate="SECONDARY">Средно</span> <strong>59%</strong></li>
-									<li><span translate="COLLEGE">Полувисше</span> <strong>5%</strong></li>
-									<li><span translate="HIGHER">Висше</span> <strong>24%</strong></li>
+									<li><span translate="SECONDARY"></span> <strong>59%</strong></li>
+									<li><span translate="COLLEGE"></span> <strong>5%</strong></li>
+									<li><span translate="HIGHER"></span> <strong>24%</strong></li>
 								</ul>							
 							</div>
 						</div>
@@ -276,24 +284,25 @@
 				<div class="brand-medias">
 					<img src="img/kulinaria.png" />
 					<ul class="media-top kulinaria">
-						<li translate="KULINARIA IS MEDIA">Kulinaria.bg е медия за вкусно и здравословно хранене</li>
-						<li translate="PRESENTS IN AN ORIGINAL AND">По оригинален и достъпен начин, представя <strong> най-доброто от традиционната и модерна кухня, майстор-готвачи, места с добра кухня и атмосфера</strong> </li>
+						<li translate="KULINARIA IS MEDIA"></li>
+						<li translate="PRESENTS IN AN ORIGINAL AND"></strong> </li>
 					</ul>
 
 					<div class="bottom">
 						<div class="media-bottom">
 							<img src="img/laptop.png" />
-							<span class="topdata" translate="UNIQUE">Уникални</span> 
-							<small translate="MONTHLY USERS">потребители месечно:</small>
+							<span class="topdata" translate="UNIQUE"></span> 
+							<div class="center"><small translate="MONTHLY USERS"></small></div>
 							<span class="huge">140 000</span>
-							<img src="img/eye.png" style="padding-top: 30px;" />
-							<span class="topdata part" translate="IMPRESSIONS">Импресии</span> 
+							<hr style="width: 150px;"/>
+							<img class="impressions" src="img/eye.png" />
+							<span class="topdata part" translate="IMPRESSIONS"></span> 
 							<span class="huge">661 000</span>						
 						</div>
 						<div class="media-bottom right">
-							<img src="img/kulinaria-data.png" />
+							<span translate="KULINARIA DATA IMG"></span>
 							<div class="data">
-								<h4 translate="AGE">Възраст: </h4>
+								<h4 translate="AGE"> </h4>
 								<ul>
 									<li>15-24 <strong>29%</strong></li>
 									<li>25-34 <strong>24%</strong></li>
@@ -303,11 +312,11 @@
 								</ul>							
 							</div>
 							<div class="data">
-								<h4  translate="EDUCATION">Образование: </h4>
+								<h4  translate="EDUCATION"></h4>
 								<ul>
-									<li><span translate="SECONDARY">Средно</span> <strong>68%</strong></li>
-									<li><span translate="COLLEGE">Полувисше</span> <strong>6%</strong></li>
-									<li><span translate="HIGHER">Висше</span> <strong>29%</strong></li>
+									<li><span translate="SECONDARY"></span> <strong>68%</strong></li>
+									<li><span translate="COLLEGE"></span> <strong>6%</strong></li>
+									<li><span translate="HIGHER"></span> <strong>29%</strong></li>
 								</ul>							
 							</div>
 						</div>
@@ -318,30 +327,31 @@
 				<div class="brand-medias">
 					<img src="img/termo.png" />
 					<ul class="media-top termo">
-						<li translate="TERMO IS A SITE FOR TRAVEL"><strong>Termo.bg</strong> е сайт за пътувания и забавление за всяко време. Представя най-интересното от необятния свят на пътешествията</li>
-						<li translate="RECOMMENDS UPCOMING EVENTS">Препоръчва предстоящи събития, забележителности, заведения, хотели, шопинг възможности в страната и чужбина.</li>
-						<li translate="PRESENTS DETAILED 15 DAY">Представя детайлна 15-дневна прогноза за времето в над 200 000локации</li>
+						<li translate="TERMO IS A SITE FOR TRAVEL"></li>
+						<li translate="RECOMMENDS UPCOMING EVENTS"></li>
+						<li translate="PRESENTS DETAILED 15 DAY"></li>
 					</ul>
 					
 					<div class="bottom">
 						<div class="media-bottom">
 							<img src="img/laptop.png" />
-							<span class="topdata" translate="UNIQUE">Уникални</span> 
-							<small translate="MONTHLY USERS">потребители месечно:</small>
+							<span class="topdata" translate="UNIQUE"></span> 
+							<div class="center"><small translate="MONTHLY USERS"></small></div>
 							<span class="huge">35 000</span>
-							<img src="img/eye.png" style="padding-top: 30px;" />
-							<span class="topdata part" translate="IMPRESSIONS">Импресии</span> 
+							<hr style="width: 150px;"/>
+							<img class="impressions" src="img/eye.png" />
+							<span class="topdata part" translate="IMPRESSIONS"></span> 
 							<span class="huge">266 000</span>
 							<div class="mb-footer">
 								<span class="map">1%</span>
-								<span translate="AUDIENCE OF">Обхват на</span>
-								 <small translate="OF REACH">аудиторията</small>
+								<span translate="AUDIENCE OF"></span>
+								 <small translate="OF REACH"></small>
 							</div>
 						</div>
 						<div class="media-bottom right">
-							<img src="img/termo-data.png" />
+							<span translate="TERMO DATA IMG"></span>
 							<div class="data">
-								<h4 translate="AGE">Възраст: </h4>
+								<h4 translate="AGE"> </h4>
 								<ul>
 									<li>15-24 <strong>29%</strong></li>
 									<li>25-34 <strong>22%</strong></li>
@@ -351,11 +361,11 @@
 								</ul>							
 							</div>
 							<div class="data">
-								<h4  translate="EDUCATION">Образование: </h4>
+								<h4  translate="EDUCATION"> </h4>
 								<ul>
-									<li><span translate="SECONDARY">Средно</span> <strong>61%</strong></li>
-									<li><span translate="COLLEGE">Полувисше</span> <strong>6%</strong></li>
-									<li><span translate="HIGHER">Висше</span> <strong>26%</strong></li>
+									<li><span translate="SECONDARY"></span> <strong>61%</strong></li>
+									<li><span translate="COLLEGE"></span> <strong>6%</strong></li>
+									<li><span translate="HIGHER"></span> <strong>26%</strong></li>
 								</ul>							
 							</div>
 						</div>
@@ -365,8 +375,8 @@
 				<div class="brand-medias">
 					<img src="img/hardware.png" />
 					<ul class="media-top hardware">
-						<li translate="HARDWARE IS THE MOST POPULAR HARDWARE"><strong>Hardware.bg</strong> е най-популярния сайт за хардуер, софтуер и техологии в страната</li>
-						<li translate="EXCEPTIONALLY WELL DEVELOPED FORUM">Разполага с изключително развит форум</li>
+						<li translate="HARDWARE IS THE MOST POPULAR HARDWARE"</li>
+						<li translate="EXCEPTIONALLY WELL DEVELOPED FORUM"></li>
 						
 					</ul>
 					
@@ -374,36 +384,37 @@
 					<div class="bottom">
 						<div class="media-bottom">
 							<img src="img/laptop.png" />
-							<span class="topdata" translate="UNIQUE">Уникални</span> 
-							<small translate="MONTHLY USERS">потребители месечно:</small>
+							<span class="topdata" translate="UNIQUE"></span> 
+							<div class="center"><small translate="MONTHLY USERS"></small></div>
 							<span class="huge">322 000</span>
-							<img src="img/eye.png" style="padding-top: 30px;" />
-							<span class="topdata part" translate="IMPRESSIONS">Импресии</span> 
+							<hr style="width: 150px;"/>
+							<img class="impressions" src="img/eye.png" />
+							<span class="topdata part" translate="IMPRESSIONS"></span> 
 							<span class="huge">3 100 000</span>
 							<div class="mb-footer">
 								<span class="map">7%</span>
-								<span translate="AUDIENCE OF">Обхват на</span>
-								 <small translate="OF REACH">аудиторията</small>
+								<span translate="AUDIENCE OF"></span>
+								 <small translate="OF REACH"></small>
 							</div>
 						</div>
 						<div class="media-bottom right">
-							<img src="img/hardware-data.png" />
+							<span translate="HARDWARE DATA IMG"></span>
 							<div class="data">
-								<h4 translate="AGE">Възраст: </h4>
+								<h4 translate="AGE">: </h4>
 								<ul>
 									<li>15-24 <strong>35%</strong></li>
-									<li>25-34 <strong>27%</strong></li>
+									<li>25-34 <strong>27%</strong></li> 
 									<li>35-44 <strong>22%</strong></li>
 									<li>45-54 <strong>11%</strong></li>
 									<li>55+ <strong>5%</strong></li>
 								</ul>							
 							</div>
 							<div class="data">
-								<h4  translate="EDUCATION">Образование: </h4>
+								<h4  translate="EDUCATION"></h4>
 								<ul>
-									<li><span translate="SECONDARY">Средно</span> <strong>57%</strong></li>
-									<li><span translate="COLLEGE">Полувисше</span> <strong>6%</strong></li>
-									<li><span translate="HIGHER">Висше</span> <strong>25%</strong></li>
+									<li><span translate="SECONDARY"></span> <strong>57%</strong></li>
+									<li><span translate="COLLEGE"></span> <strong>6%</strong></li>
+									<li><span translate="HIGHER"></span> <strong>25%</strong></li>
 								</ul>							
 							</div>
 						</div>
@@ -414,28 +425,30 @@
 				<div class="brand-medias">
 					<img src="img/mobility.png" />
 					<ul class="media-top mobility">
-						<li translate="MOBILITY UNITES"><strong>Mobility.bg</strong> - обединява тритр най-популярни сайта за фенове на мобилни телефони<strong>iPhone-Bulgaria.com, WinPhone.bg, AllAndroid.com</strong> посещава се от аудитория, която <strong>се интересува от най-новото в света на мобилните технологии и има сериозни познания в областта</strong></li>
+						<li translate="MOBILITY UNITES"></li>
+						<li translate="MOBILITY ITS AUDIENCE"></li>
 					</ul>
 					
 					<div class="bottom">
 						<div class="media-bottom">
 							<img src="img/laptop.png" />
-							<span class="topdata" translate="UNIQUE">Уникални</span> 
-							<small translate="MONTHLY USERS">потребители месечно:</small>
+							<span class="topdata" translate="UNIQUE"></span> 
+							<div class="center"><small translate="MONTHLY USERS"></small></div>
 							<span class="huge">84 000</span>
-							<img src="img/eye.png" style="padding-top: 30px;" />
-							<span class="topdata part" translate="IMPRESSIONS">Импресии</span> 
+							<hr style="width: 150px;"/>
+							<img class="impressions" src="img/eye.png"  />
+							<span class="topdata part" translate="IMPRESSIONS"></span> 
 							<span class="huge">922 000</span>
 							<div class="mb-footer">
 								<span class="map">1%</span>
-								<span translate="AUDIENCE OF">Обхват на</span>
-								 <small translate="OF REACH">аудиторията</small>
+								<span translate="AUDIENCE OF"></span>
+								 <small translate="OF REACH"></small>
 							</div>
 						</div>
 						<div class="media-bottom right">
-							<img src="img/mobility-data.png" />
+							<span translate="MOBILITY DATA IMG"></span>
 							<div class="data">
-								<h4 translate="AGE">Възраст: </h4>
+								<h4 translate="AGE"> </h4>
 								<ul>
 									<li>15-24 <strong>34%</strong></li>
 									<li>25-34 <strong>40%</strong></li>
@@ -445,11 +458,11 @@
 								</ul>							
 							</div>
 							<div class="data">
-								<h4  translate="EDUCATION">Образование: </h4>
+								<h4  translate="EDUCATION"></h4>
 								<ul>
-									<li><span translate="SECONDARY">Средно</span> <strong>52%</strong></li>
-									<li><span translate="COLLEGE">Полувисше</span> <strong>9%</strong></li>
-									<li><span translate="HIGHER">Висше</span> <strong>26%</strong></li>
+									<li><span translate="SECONDARY"></span> <strong>52%</strong></li>
+									<li><span translate="COLLEGE"></span> <strong>9%</strong></li>
+									<li><span translate="HIGHER"></span> <strong>26%</strong></li>
 								</ul>							
 							</div>
 						</div>
@@ -462,27 +475,28 @@
 				<div class="brand-medias">
 					<img src="img/mobile.png" />
 					<ul class="media-top mobile">
-						<li translate="IN 2013 MOBILE">През 2013 година <strong>Ксениум Медиа</strong> започва да предлага ексклузивно за България <strong>mobile.de</strong> и трафика ба жългарската аудитория в него</li>
-						<li translate="THE AUDIENCE CONSISTS">Аудиторията е предимно <strong>млади хора, с високи доходи</strong>, търсещи автомобили за покупка, с цена над 5000 евро</li>
+						<li translate="IN 2013 MOBILE"</li>
+						<li translate="THE AUDIENCE CONSISTS"></li>
 					</ul>
 
 					<div class="bottom">
 						<div class="media-bottom">
 							<img src="img/laptop.png" />
-							<span class="topdata" translate="UNIQUE">Уникални</span> 
-							<small translate="MONTHLY USERS">потребители месечно:</small>
+							<span class="topdata" translate="UNIQUE"></span> 
+							<div class="center"><small translate="MONTHLY USERS"></small></div>
 							<span class="huge">205 000</span>
-							<img src="img/eye.png" style="padding-top: 30px;" />
-							<span class="topdata part" translate="IMPRESSIONS">Импресии</span> 
+							<hr style="width: 150px;"/>
+							<img class="impressions" src="img/eye.png" />
+							<span class="topdata part" translate="IMPRESSIONS"></span> 
 							<span class="huge">22 000 000</span>
 							<div class="mb-footer">
 								<span class="map">1%</span>
-								<span translate="AUDIENCE OF">Обхват на</span>
-								 <small translate="OF REACH">аудиторията</small>
+								<span translate="AUDIENCE OF"></span>
+								 <small translate="OF REACH"></small>
 							</div>
 						</div>
 						<div class="media-bottom right">
-							<img src="img/mobile-data.png" />						
+							<span translate="MOBILE DATA IMG"></span>						
 						</div>
 					</div>
 				</div>
@@ -490,25 +504,26 @@
 				<div class="brand-medias">
 					<img src="img/calculator.png" />
 					<ul class="media-top">
-						<li translate="CALCULATOR FOR EVERYTHING"><strong>Calculator.bg</strong> - за всичко и за всияки</li>
-						<li translate="FACILITATES ANY CALCULATION">Улеснява всяко едно изчисление</li>
-						<li translate="YOU CAN CALCULATE">Можеш да изчислиш <strong> заплата, валута, лихвинотариални такси, данъци и др.</strong> </li>
+						<li translate="CALCULATOR FOR EVERYTHING"></li>
+						<li translate="FACILITATES ANY CALCULATION"></li>
+						<li translate="YOU CAN CALCULATE"> </li>
 						
 					</ul>
 
 					<div class="bottom">
 						<div class="media-bottom">
 							<img src="img/laptop.png" />
-							<span class="topdata" translate="UNIQUE">Уникални</span> 
-							<small translate="MONTHLY USERS">потребители месечно:</small>
+							<span class="topdata" translate="UNIQUE"></span> 
+							<div class="center"><small translate="MONTHLY USERS"></small></div>
 							<span class="huge">120 000</span>
-							<img src="img/eye.png" style="padding-top: 30px;" />
-							<span class="topdata part" translate="IMPRESSIONS">Импресии</span> 
+							<hr style="width: 150px;"/>
+							<img class="impressions" src="img/eye.png"  />
+							<span class="topdata part" translate="IMPRESSIONS"></span> 
 							<span class="huge">400 000</span>
 							<div class="mb-footer">
 								<span class="map">1%</span>
-								<span translate="AUDIENCE OF">Обхват на</span>
-								 <small translate="OF REACH">аудиторията</small>
+								<span translate="AUDIENCE OF"></span>
+								 <small translate="OF REACH"></small>
 							</div>
 						</div>
 					</div>
@@ -520,29 +535,30 @@
 				<div class="brand-medias">
 					<img src="img/meganews.png" />
 					<ul class="media-top meganews">
-						<li translate="MEGANEWS IS AN INFORMATION SITE"><strong>Meganews.bg</strong> е информационен сайт, който показва най-горещите факти от деня такива, каквито са</li>
-						<li translate="OUR MISSION IS TO IMPARTIALLY INFORM">Мисията ни е да информираме безпристрастно аудиторията, давайки свобода на читателите сами да изразяват гражданската си позиция.</li>
+						<li translate="MEGANEWS IS AN INFORMATION SITE"></li>
+						<li translate="OUR MISSION IS TO IMPARTIALLY INFORM"></li>
 					</ul>
 
 					<div class="bottom">
 						<div class="media-bottom">
 							<img src="img/laptop.png" />
-							<span class="topdata" translate="UNIQUE">Уникални</span> 
-							<small translate="MONTHLY USERS">потребители месечно:</small>
+							<span class="topdata" translate="UNIQUE"></span> 
+							<div class="center"><small translate="MONTHLY USERS"></small></div>
 							<span class="huge">335 000</span>
-							<img src="img/eye.png" style="padding-top: 30px;" />
-							<span class="topdata part" translate="IMPRESSIONS">Импресии</span> 
+							<hr style="width: 150px;"/>
+							<img class="impressions" src="img/eye.png"  />
+							<span class="topdata part" translate="IMPRESSIONS"></span> 
 							<span class="huge">1 600 000</span>
 							<div class="mb-footer">
 								<span class="map">5%</span>
-								<span translate="AUDIENCE OF">Обхват на</span>
-								 <small translate="OF REACH">аудиторията</small>
+								<span translate="AUDIENCE OF"></span>
+								 <small translate="OF REACH"></small>
 							</div>
 						</div>
 						<div class="media-bottom right">
-							<img src="img/meganews-data.png" />
+							<span translate="MEGANEWS DATA IMG"></span>
 							<div class="data">
-								<h4 translate="AGE">Възраст: </h4>
+								<h4 translate="AGE"> </h4>
 								<ul>
 									<li>15-24 <strong>34%</strong></li>
 									<li>25-34 <strong>29%</strong></li>
@@ -554,60 +570,41 @@
 							<div class="data">
 								<h4  translate="EDUCATION">Образование: </h4>
 								<ul>
-									<li><span translate="SECONDARY">Средно</span> <strong>74%</strong></li>
-									<li><span translate="HIGHER">Висше</span> <strong>26%</strong></li>
+									<li><span translate="SECONDARY"></span> <strong>74%</strong></li>
+									<li><span translate="HIGHER"></span> <strong>26%</strong></li>
 								</ul>							
 							</div>
 						</div>
-						<!-- <div class="meganews-bottom right">
-							<img src="img/meganews-data.png" />
-							<div class="data">
-								<h4 translate="AGE">Възраст: </h4>
-								<ul>
-									<li>15-24 <strong>34%</strong></li>
-									<li>25-34 <strong>29%</strong></li>
-									<li>35-44 <strong>20%</strong></li>
-									<li>45-54 <strong>12%</strong></li>
-									<li>55+ <strong>5%</strong></li>
-								</ul>							
-							</div>
-							<div class="data">
-								<h4 translate="EDUCATION">Образование: </h4>
-								<ul>
-									<li><span translate="SECONDARY">Средно</span> <strong>74%</strong></li>
-									<li><span translate="HIGHER">Висше</span> <strong>26%</strong></li>
-								</ul>							
-							</div>
-						</div> -->
 					</div>
 				</div>
 
 				<div class="brand-medias">
 					<img src="img/niejenite.png" />
 					<ul class="media-top jenite">
-						<li translate="NIEJENITE IS A SITE"><strong>Nie-jenite.bg</strong> е сайт за модерната и успяла жена, интересуваща се <strong>мода, красота, задраве, любов, дизайн и полезни съвети</strong></li>
-						<li translate="THE MEDIUM ALLOWS ITS USERS">Медията позволява потребителите да оценяват и коментират публикации, да споделяти обсъждат своите проблеми и истории</li>						
+						<li translate="NIEJENITE IS A SITE"></li>
+						<li translate="THE MEDIUM ALLOWS ITS USERS"></li>						
 					</ul>
 
 					<div class="bottom">
 						<div class="media-bottom">
 							<img src="img/laptop.png" />
-							<span class="topdata" translate="UNIQUE">Уникални</span> 
-							<small translate="MONTHLY USERS">потребители месечно:</small>
+							<span class="topdata" translate="UNIQUE"></span> 
+							<div class="center"><small translate="MONTHLY USERS"></small></div>
 							<span class="huge">200 000</span>
-							<img src="img/eye.png" style="padding-top: 30px;" />
-							<span class="topdata part" translate="IMPRESSIONS">Импресии</span> 
+							<hr style="width: 150px;"/>
+							<img class="impressions" src="img/eye.png"  />
+							<span class="topdata part" translate="IMPRESSIONS"></span> 
 							<span class="huge">610 000</span>
 							<div class="mb-footer">
 								<span class="map">2%</span>
-								<span translate="AUDIENCE OF">Обхват на</span>
-								 <small translate="OF REACH">аудиторията</small>
+								<span translate="AUDIENCE OF"></span>
+								 <small translate="OF REACH"></small>
 							</div>
 						</div>
 						<div class="media-bottom right">
-							<img src="img/jenite-data.png" />
+							<span translate="JENITE DATA IMG"></span>
 							<div class="data">
-								<h4 translate="AGE">Възраст: </h4>
+								<h4 translate="AGE"></h4>
 								<ul>
 									<li>15-24 <strong>38%</strong></li>
 									<li>25-34 <strong>27%</strong></li>
@@ -617,10 +614,10 @@
 								</ul>							
 							</div>
 							<div class="data">
-								<h4  translate="EDUCATION">Образование: </h4>
+								<h4  translate="EDUCATION"> </h4>
 								<ul>
-									<li><span translate="SECONDARY">Средно</span> <strong>73%</strong></li>
-									<li><span translate="HIGHER">Висше</span> <strong>27%</strong></li>
+									<li><span translate="SECONDARY"></span> <strong>73%</strong></li>
+									<li><span translate="HIGHER"></span> <strong>27%</strong></li>
 								</ul>							
 							</div>
 						</div>
@@ -632,29 +629,30 @@
 				<div class="brand-medias">
 					<img src="img/megalife.png" />
 					<ul class="media-top megalife">
-						<li translate="MEGALIFE IS A DEVELOPED"><strong>Megalife.bg</strong> е развита и успешна лайфстайл медия, която има за цел да информира и забавлява потребителите си с богато разнообразие от съдържателни публикации</li>
-						<li translate="THE MEDIUMS USERS">Потребителите на медията са главно <strong>Икономически активни, заинтересовани от лайфстайла в страната </strong> </li>
+						<li translate="MEGALIFE IS A DEVELOPED"></li>
+						<li translate="THE MEDIUMS USERS"></li>
 					</ul>
 
 					<div class="bottom">
 						<div class="media-bottom">
 							<img src="img/laptop.png" />
-							<span class="topdata" translate="UNIQUE">Уникални</span> 
-							<small translate="MONTHLY USERS">потребители месечно:</small>
+							<span class="topdata" translate="UNIQUE"></span> 
+							<div class="center"><small translate="MONTHLY USERS"></small></div>
 							<span class="huge">100 000</span>
-							<img src="img/eye.png" style="padding-top: 30px;" />
-							<span class="topdata part" translate="IMPRESSIONS">Импресии</span> 
+							<hr style="width: 150px;"/>
+							<img class="impressions" src="img/eye.png"  />
+							<span class="topdata part" translate="IMPRESSIONS"></span> 
 							<span class="huge">210 000</span>
 							<div class="mb-footer">
 								<span class="map">1%</span>
-								<span translate="AUDIENCE OF">Обхват на</span>
-								 <small translate="OF REACH">аудиторията</small>
+								<span translate="AUDIENCE OF"></span>
+								 <small translate="OF REACH"></small>
 							</div>
 						</div>
 						<div class="media-bottom right">
-							<img src="img/megalife-data.png" />
+							<span translate="MEGALIFE DATA IMG"></span>
 							<div class="data">
-								<h4 translate="AGE">Възраст: </h4>
+								<h4 translate="AGE"> </h4>
 								<ul>
 									<li>15-24 <strong>35%</strong></li>
 									<li>25-34 <strong>23%</strong></li>
@@ -664,10 +662,10 @@
 								</ul>							
 							</div>
 							<div class="data">
-								<h4  translate="EDUCATION">Образование: </h4>
+								<h4  translate="EDUCATION"> </h4>
 								<ul>
-									<li><span translate="SECONDARY">Средно</span> <strong>65%</strong></li>
-									<li><span translate="HIGHER">Висше</span> <strong>19%</strong></li>
+									<li><span translate="SECONDARY"></span> <strong>65%</strong></li>
+									<li><span translate="HIGHER"></span> <strong>19%</strong></li>
 								</ul>							
 							</div>
 						</div>
@@ -677,30 +675,31 @@
 				<div class="brand-medias">
 					<img src="img/foods.png" />
 					<ul class="media-top foods">
-						<li translate="FOODS IS A CULINARY SITE"><strong>Foods.bg</strong> е кулинарен сайт с множество избрани рецепти, любопитни факти и полезни приложения.</li>
-						<li translate="IT PRESENTS IN THE MOST">Представя максимално достъпно най-добрите рецепти като акцентът е върху здравословното хранене и начин на живот. Аудиорията е предимно от жени, от добрата кухня и здраве</li>
+						<li translate="FOODS IS A CULINARY SITE"></li>
+						<li translate="IT PRESENTS IN THE MOST"></li>
 						
 					</ul>
 
 					<div class="bottom">
 						<div class="media-bottom">
 							<img src="img/laptop.png" />
-							<span class="topdata" translate="UNIQUE">Уникални</span> 
-							<small translate="MONTHLY USERS">потребители месечно:</small>
+							<span class="topdata" translate="UNIQUE"></span> 
+							<div class="center"><small translate="MONTHLY USERS"></small></div>
 							<span class="huge">50 000</span>
-							<img src="img/eye.png" style="padding-top: 30px;" />
-							<span class="topdata part" translate="IMPRESSIONS">Импресии</span> 
+							<hr style="width: 150px;"/>
+							<img class="impressions" src="img/eye.png"  />
+							<span class="topdata part" translate="IMPRESSIONS"></span> 
 							<span class="huge">160 000</span>
 							<div class="mb-footer">
 								<span class="map">1%</span>
-								<span translate="AUDIENCE OF">Обхват на</span>
-								 <small translate="OF REACH">аудиторията</small>
+								<span translate="AUDIENCE OF"></span>
+								 <small translate="OF REACH"></small>
 							</div>
 						</div>
 						<div class="media-bottom right">
-							<img src="img/foods-data.png" />
+							<span translate="FOODS DATA IMG"></span>
 							<div class="data">
-								<h4 translate="AGE">Възраст: </h4>
+								<h4 translate="AGE"> </h4>
 								<ul>
 									<li>15-24 <strong>25%</strong></li>
 									<li>25-34 <strong>38%</strong></li>
@@ -710,10 +709,10 @@
 								</ul>							
 							</div>
 							<div class="data">
-								<h4  translate="EDUCATION">Образование: </h4>
+								<h4  translate="EDUCATION"></h4>
 								<ul>
-									<li><span translate="SECONDARY">Средно</span> <strong>68%</strong></li>
-									<li><span translate="HIGHER">Висше</span> <strong>18%</strong></li>
+									<li><span translate="SECONDARY"></span> <strong>68%</strong></li>
+									<li><span translate="HIGHER"></span> <strong>18%</strong></li>
 								</ul>							
 							</div>
 						</div>
@@ -723,18 +722,18 @@
 				<div class="brand-medias">
 					<img src="img/kidamom.png" />
 					<ul class="media-top kidamom">
-						<li translate="KIDAMOM IS A FUN"><strong>Kidamom.com</strong> забавна интерактивна среда за вашето дете с много анимационни и образователни филми.</li>
-						<li translate="XENIUM MEDIA COMPANY TOGETHER WITH">Xenium Media Company с удоволствие ви представя онлайн проекта Kidamom.com, съвместно с Кидамом ООД и Eleven. Kidamom.com предоставя интерактивна среда за деца до 12 години. В специализирания сайт подрастващите обогатяват своите уменията и знанията по забавен и достъпен начин.</li>
-						<li translate="KIDAMOM IS A PLACE">Kidamom.com е място, в което децата се въвеждат в съвременния дигитален свят, развивайки своите личностни качества и индивидуални навици. Платформата предлагаме подбрано качествено съдържание и възможност за родителски контрол.</li>
+						<li translate="KIDAMOM IS A FUN"></li>
+						<li translate="XENIUM MEDIA COMPANY TOGETHER WITH"></li>
+						<li translate="KIDAMOM IS A PLACE"></li>
 					</ul>					
 				</div>
 
 				<div class="brand-medias">
 					<img src="img/shvargalo.png" />
 					<ul class="media-top shvargalo">
-						<li translate="SHVARGALO IS AN ART COMPANY"><strong>Shvargalo.com</strong> е арт компания, която се занимава с <strong> продуциране и произвеждане на филми, книги, спектакли, музикално-танцови и сценични произведения.</strong></li>
-						<li translate="KAMEN DONEV AND ELENA BOZOVA">В проекта взимат участие <strong> Камен Донев (режисьор и актьор) Елена Бозова (актьор)</strong> в компанията на именити български актьори.</li>
-						<li translate="THE AUDIENCE CONSISTS OF">Аудиторията е <strong> мъже и жени на възраст между 20 и 40 години,</strong> жители на големи и средни градове, икономически активни потребители, интересуващи се от <strong> мъже и жени на възраст между 20 и 40 години,</strong> култура, изкуство и развлечения.</li>						
+						<li translate="SHVARGALO IS AN ART COMPANY"></li>
+						<li translate="KAMEN DONEV AND ELENA BOZOVA"></li>
+						<li translate="THE AUDIENCE CONSISTS OF"></li>						
 					</ul>
 				</div>
 
@@ -744,32 +743,32 @@
 				<div class="section-outer" id="others">
 					<div class="section-inner clear">
 						<div class="otherforms video">
-							<div class="x-tops"><h1 translate="NONSTANDARD FORMATS">НЕСТАРДАНТНИ ФОРМАТИ</h1></div>
+							<div class="x-tops"><h1 translate="NONSTANDARD FORMATS"></h1></div>
 							<div style="clear: both;"></div>
 							<div class="other-medias">
-								<h5><span translate="CLIENT">Клиент:</span> Plesio</h5>
+								<h5><span translate="CLIENT"></span> Plesio</h5>
 								<img src="img/plesio.png" height="" />
-								<p>Видео клипът „От любов към технологиите“ е създаден като концепция и реализиран от екипа на Ксениум Медия. </p>
-								<p>Популяризирането му бе извършено чрез различните социални канали – Facebook, You Tube, Vimeo и др. и сайтовете на Ксениум Медия.</p>
+								<p translate="PLESIO: THE VIDEO"></p>
+								<p translate="PLESIO: POPULARIZED"></p>
 
 							</div>
 
 							<div class="other-medias right">
-								<h5><span translate="CLIENT">Клиент:</span> Amstel</h5>
+								<h5><span translate="CLIENT"></span> Amstel</h5>
 								<img src="img/amstel.png" height="" />
-								<p>„Бирена церемония“ e нестандартен рекламен видео формат (дълъг е 02:51 минути) и носи всички характеристики на късометражен игрален филм.</p>
-								<p>Концепцията и реализацията на видео клипа са на Ксениум Медия.</p>
+								<p translate="AMSTEL: BEER CEREMONY"></p>
+								<p translate="AMSTEL: CONCEPT"></p>
 							</div>
 						</div>
 
 						<div class="otherforms clear">
-							<div class="x-tops  repeat"><h1>НЕСТАРДАНТНИ ФОРМАТИ</h1></div>
+							<div class="x-tops  repeat"><h1 translate="NONSTANDARD FORMATS"></h1></div>
 							<div style="clear: both;"></div>
 							
 							<div class="other-medias">
-								<h5><span translate="CLIENT">Клиент:</span> Nescafe Dolce Gusto</h5>
+								<h5><span translate="CLIENT"></span> Nescafe Dolce Gusto</h5>
 								<img src="img/nescafe.png" height="" />
-								<p translate="NESCAFE: THE GAME ATTRACTED">Играта се проведе при голям интерес и за периода на конкурса получихме над 70 авторски рецепти. Страницата на конкурса беше широко промотирана в сайтовете на Ксениум Медия и за периода на кампанията беше посетена от над 50 000 потребители и събра над 20 000 харесвания на рецептите във Facebook.</p>
+								<p translate="NESCAFE: THE GAME ATTRACTED"></p>
 
 								<p translate="NESCAFE: THE CONTEST WEBPAGE"></p>
 
@@ -777,34 +776,33 @@
 							
 
 							<div class="other-medias right">
-								<h5><span translate="CLIENT">Клиент:</span> Tefal</h5>
+								<h5><span translate="CLIENT"></span> Tefal</h5>
 								<img src="img/tefal.png" height="" />
-								<p translate="TEFAL: THE GAME">Играта се проведе при голям интерес от потребителите. Всеки един от тях представи своето любимо модно съчетание, като покани приятелите си да гласуват за неговата снимка. Играта се проведе в рамките на петнадесет дни, като беше промотирана чрез брандиране на Bulevard.bg</p>
-								<p translate="NESCAFE: THE CONTEST WEBPAGE"></p>
+								<p translate="TEFAL: THE GAME"></p>
+								<p translate="TEFAL: THE GAME TOOK PLACE"></p>
 							</div>
 						</div>
 
 						<div class="otherforms clear">
-							<div class="x-tops  repeat"><h1>НЕСТАРДАНТНИ ФОРМАТИ</h1></div>
+							<div class="x-tops  repeat"><h1 translate="NONSTANDARD FORMATS"></h1></div>
 							<div style="clear: both;"></div>
 							
 							<div class="other-medias">
-								<h5><span translate="CLIENT">Клиент:</span> Escada</h5>
+								<h5><span translate="CLIENT"></span> Escada</h5>
 								<img src="img/escada.png" height="" />
-								<p>Потребителите избираха аромата, който най-много им допада и избора им се отразяваше и на стените им във Facebook. </p>
-								<p>Това създаде вирусен ефект и интерес сред приятелите им. Само за 20 дни кампанията събра близо 1000 участника и над 150 коментара. Постигнахме добра интеракция с марката и накарахме потребителите да се асоцират с различните аромати.</p>
+								<p translate="ESCADA: USERS CHOSE THE AROMA"> </p>
+								<p translate="ESCADA: THIS CREATED A VIRAL EFFECT"></p>
 
 							</div>
 							
 
 							<div class="other-medias right">
-								<h5><span translate="CLIENT">Клиент:</span> Bruno Banani</h5>
+								<h5><span translate="CLIENT"></span> Bruno Banani</h5>
 								<img src="img/bruno.png" height="" />
-								<p>Игра подтикваща мъжката аудитория да разглежда и избира сексапилни девойки и да пише под формата на коментар реплики за свалки.</p>
-								<p>За периода на играта са регистрирани над 230 потребители и над 230 постинга, които се състезават за наградата. Събрани бяха над 9000 гласа. Кампанията беше много добре отразена с PR в цялата мрежа от сайтове на Xenium Media.</p>
+								<p translate="BRUNO: A GAME URGING MALE AUDIENCE"></p>
+								<p translate="BRUNO: MORE THAN 230 USERS"></p>
 							</div>
 						</div>
-
 
 					</div>
 				</div>
@@ -812,7 +810,6 @@
 
 			</div>
 		</div>
-
 		<script src="http://localhost:35729/livereload.js"></script>
 	</body>
 </html>
