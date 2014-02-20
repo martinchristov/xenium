@@ -826,7 +826,8 @@ var dictBG = {
     "MEGANEWS DATA IMG":'<img src="img/meganews-data.png" />',
     "JENITE DATA IMG":'<img src="img/jenite-data.png" />',
     "MEGALIFE DATA IMG":'<img src="img/megalife-data.png" />',
-    "FOODS DATA IMG":'<img src="img/foods-data.png" />'
+    "FOODS DATA IMG":'<img src="img/foods-data.png" />',
+    "THANK YOU":"Благодаря Ви!"
 
 
 }
@@ -918,6 +919,7 @@ var dictEN = {
     "MEGANEWS DATA IMG":'<img src="img/meganews-dataEn.png" />',
     "JENITE DATA IMG":'<img src="img/jenite-dataEn.png" />',
     "MEGALIFE DATA IMG":'<img src="img/megalife-dataEn.png" />',
-    "FOODS DATA IMG":'<img src="img/foods-dataEn.png" />'
+    "FOODS DATA IMG":'<img src="img/foods-dataEn.png" />',
+    "THANK YOU":"Thank You!"
 
 }

@@ -26,8 +26,8 @@
 					<li class="mobile-contact"><a href="#contact" translate="CONTACT"></a></li>
 				</ul>
 
-				<div class="lang" ng-model="lang" ng-show="lang"><a href="" ng-click="changeLanguage('bg')">bg</a></div>
-				<div class="lang" ng-model="lang" ng-show="!lang"><a href="" ng-click="changeLanguage('en')">en</a></div>
+				<div class="lang" ng-model="lang" ng-show="!lang"><a href="" ng-click="changeLanguage('bg')">bg</a></div>
+				<div class="lang" ng-model="lang" ng-show="lang"><a href="" ng-click="changeLanguage('en')">en</a></div>
 			</div>
 		</div>
 		<div class="section-outer" id="home">
@@ -809,10 +809,11 @@
 
 
 			</div>
-		</div>
-
+		</div>		
 		<div id="contact">
-			<h1>Thank you!</h1>
+			<h1 translate="THANK YOU">Thank you!</h1>
+			<hr />
+			<div><img src="img/main-contact.png" />+359 2 426 00 74</div>
 		</div>
 		<script src="http://localhost:35729/livereload.js"></script>
 	</body>
