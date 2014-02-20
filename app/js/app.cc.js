@@ -684,7 +684,7 @@ $doc.ready(function(){
 		e.preventDefault();
 		var href = $(this).attr('href')
 		var $target = $(href);
-		$doc.scrollTo($target.offset().top-200,500);
+		$doc.scrollTo($target.offset().top-110,500);
 	})
 	$sections = $('.section-outer');
 	$(window).resize();
@@ -745,7 +745,7 @@ var dictBG = {
     "AUDIENCE":"Аудитория",
     "BRAND": "Бранд",
     "CONTACT":"Контакт",
-    "LEADING MEDIA COMPANY":"Xenium е водеща медийна компания в България.",
+    "LEADING MEDIA COMPANY":"Xenium е водеща медийна компания в България",
     "MEDIA KIT":"МЕДИА КИТ",
     "AUDIENCE REACH":"Медиен обхват на аудиторията",
     "AUDIENCE PROFILE":"Профил на аудиторията",
@@ -838,7 +838,7 @@ var dictEN = {
     "AUDIENCE":"Audience",
     "BRAND": "Brand",
     "CONTACT":"Contact",
-    "LEADING MEDIA COMPANY":"Xenium is a leading Bulgarian media company.",
+    "LEADING MEDIA COMPANY":"Xenium is a leading Bulgarian media company",
     "MEDIA KIT":"MEDIA KIT",
     "AUDIENCE REACH":"AUDIENCE REACH",
     "AUDIENCE PROFILE":"Audience Profile",

@@ -24,7 +24,7 @@ $doc.ready(function(){
 		e.preventDefault();
 		var href = $(this).attr('href')
 		var $target = $(href);
-		$doc.scrollTo($target.offset().top-200,500);
+		$doc.scrollTo($target.offset().top-110,500);
 	})
 	$sections = $('.section-outer');
 	$(window).resize();
