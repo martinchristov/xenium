@@ -50,17 +50,18 @@ ul{padding: 0;}
 
 .contact a{background-color: #26729c;}
 
-.portfolio .frame, .portfolio .contact a{
-	background-color:#26729c;
+.portfolio .frame, .portfolio .contact a, .portfolio .contact a:hover{
+	background-color:#26729c!important;
+
 }
-.range .frame, .range .contact a{
-	background-color:#e16a28;
+.range .frame, .range .contact a, .portfolio .contact a:hover{
+	background-color:#e16a28!important;
 }
-.audience .frame, .audience .contact a{
-	background-color:#c9da3e;
+.audience .frame, .audience .contact a, .portfolio .contact a:hover{
+	background-color:#c9da3e!important;
 }
-.brands .frame, .brands .contact a{
-	background-color:#ea2825;
+.brands .frame, .brands .contact a, .portfolio .contact a:hover{
+	background-color:#ea2825!important;
 }
 
 .header{
@@ -104,7 +105,7 @@ ul{padding: 0;}
 					text-decoration: none; 
 					color: #8c8c8c; 
 					font-size: 18px; font-weight: bold; text-transform: uppercase;
-					padding: 7px 10px;
+					padding: 7px 10px;					
 					&:hover{color: #fff; border-radius: 3px; background: #a2a2a2;}
 				}
 				&.contact{
@@ -116,8 +117,9 @@ ul{padding: 0;}
 						display: block;
 						padding-bottom: 18px;
 						text-align: center;
-						margin-left: 10px;
-						&:hover{background: #26729c;}
+						margin-left: 10px; 
+						opacity: 0.7;
+						&:hover{opacity: 1;}
 					}
 				}
 				&.mobile-contact{display:none;}
