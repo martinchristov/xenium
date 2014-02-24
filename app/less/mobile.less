@@ -353,21 +353,43 @@ and (max-width : 480px) {
 }
 
 @media only screen 
-and (max-width : 360px){
+and (max-width : 320px){
+	body{
+		padding: 0;
+		margin:0;
+		.section-outer{
+			overflow: hidden;
+			//padding: 50px 0;
+		}
+
+		.section-inner{			
+			//	margin:0;	
+			overflow: hidden;
+		}	
+	}
+
+
 	#home .x-holder img {
 		width: 90%;
-
+		margin-bottom: 40px;
 	}
 
 	#home .x-holder {
 		font-size: 20px;
 		width: 85%;
 		padding-bottom: 20px;
+		margin-top: 164px;
+	}
+
+	#portfolio{
+		padding-top: 8px;
+		margin-top: 0;
 	}
 
 	#portfolio .tops{
 		height: 5em;
 		margin-bottom: 20px;
+		margin-top: -77px;
 	}
 
 	#portfolio .tops h1 {
@@ -427,8 +449,7 @@ and (max-width : 360px){
 			width: 85%;
 			padding: 10em 0;
 			margin: auto;
-			text-align: center;
-			
+			text-align: center;			
 
 			.media-top{
 				width: auto;
@@ -513,6 +534,8 @@ and (max-width : 360px){
 					width: auto;
 				}
 			}
+			.x-video{display: none;}
+			.x-mobilevideo{display: block;}
 		}
 		}
 
@@ -537,28 +560,4 @@ and (max-width : 360px){
 		img{margin-right: 20px; margin-bottom: -7px;}
 	}
 }
-}
-
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
-}
-
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
 }
