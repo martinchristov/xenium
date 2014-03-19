@@ -827,8 +827,8 @@ var dictBG = {
     "JENITE DATA IMG":'<img src="img/jenite-data.png" />',
     "MEGALIFE DATA IMG":'<img src="img/megalife-data.png" />',
     "FOODS DATA IMG":'<img src="img/foods-data.png" />',
-    "THANK YOU":"Благодаря Ви!"
-
+    "THANK YOU":"Благодаря Ви!",
+    "CS: THE VIDEO":"Гурме храна, гурме вино, гурме ресторант... Многоуважаваният проф. Донев дегустира различни кулинарни специалитети, вина и съчетанията между тях, отговаряйки на въпроса 'Има ли гурме култура в България?'"
 
 }
 
@@ -920,6 +920,7 @@ var dictEN = {
     "JENITE DATA IMG":'<img src="img/jenite-dataEn.png" />',
     "MEGALIFE DATA IMG":'<img src="img/megalife-dataEn.png" />',
     "FOODS DATA IMG":'<img src="img/foods-dataEn.png" />',
-    "THANK YOU":"Thank You!"
+    "THANK YOU":"Thank You!",
+    "CS: THE VIDEO":""
 
 }
